@@ -1,0 +1,2502 @@
+[
+    {
+        "instruction": "What is the difference between a shallow copy and deep copy in Python?",
+        "instruction_translated": "Фарқи байни нусхаи сатҳӣ ва нусхаи амиқ дар Python чист?",
+        "category": null
+    },
+    {
+        "instruction": "Design a brand mascot.",
+        "instruction_translated": "Талисмани брендро тарҳрезӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast the two terms AI and Machine Learning.",
+        "instruction_translated": "Ду истилоҳи AI ва Machine Learning-ро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a fictional story about a wise old hermit who helps people in need in a forest.",
+        "instruction_translated": "Дар бораи як зоҳиди пири хирадманд, ки ба одамони ниёзманд дар ҷангал кӯмак мекунад, як ҳикояи хаёлӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name three environmental benefits of renewable energy",
+        "instruction_translated": "Се фоидаи экологӣ аз энергияи барқароршавандаро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of tips for someone who is learning a new language.",
+        "instruction_translated": "Барои шахсе, ки забони нав меомӯзад, рӯйхати маслиҳатҳоро тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Edit this sentence to make it more interesting and descriptive:\n\nThe chair is red.",
+        "instruction_translated": "Ин ҷумларо таҳрир кунед, то онро ҷолибтар ва тавсифӣтар гардонед: Курсӣ сурх аст.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an email heading to announce a new product launch",
+        "instruction_translated": "Барои эълони ба кор андохтани маҳсулоти нав сарлавҳаи почтаи электронӣ эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "What are the best strategies to reduce emissions?",
+        "instruction_translated": "Беҳтарин стратегияҳо барои кам кардани партовҳо кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Which country is the world's second-largest producer of olive oil?",
+        "instruction_translated": "Дуюмин кишвари бузургтарини истеҳсолкунандаи равғани зайтун дар ҷаҳон кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Identify the CPU instruction that is required for printing a character to the screen.",
+        "instruction_translated": "Дастури CPU-ро муайян кунед, ки барои чопи як аломат дар экран зарур аст.",
+        "category": null
+    },
+    {
+        "instruction": "Create a regex pattern to match all lowercase hexadecimal words",
+        "instruction_translated": "Барои мувофиқат бо ҳамаи калимаҳои хурди шонздаҳӣ як намунаи муқаррарӣ эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Summarize the key benefits of using yoga for children.",
+        "instruction_translated": "Фоидаҳои асосии истифодаи йога барои кӯдаконро ҷамъбаст кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain how technology can help with energy conservation.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна технология метавонад ба сарфаи энергия мусоидат кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Give two examples of applications of GPT models.",
+        "instruction_translated": "Ду мисоли татбиқи моделҳои GPT-ро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Assemble a 3-word phrase that has a positive connotation.",
+        "instruction_translated": "Як ибораи се калимаро тартиб диҳед, ки маънои мусбат дошта бошад.",
+        "category": null
+    },
+    {
+        "instruction": "Find the antonyms for the words 'hard' and 'weak'.",
+        "instruction_translated": "Антонимҳои калимаҳои «сахт» ва «заиф»-ро ёбед.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me about a new technological invention that could improve urban living",
+        "instruction_translated": "Дар бораи як ихтирои нави технологӣ, ки метавонад зиндагии шаҳрро беҳтар созад, ба ман нақл кунед",
+        "category": null
+    },
+    {
+        "instruction": "Create a script for performing basic computations with text data.",
+        "instruction_translated": "Барои анҷом додани ҳисобҳои асосӣ бо маълумоти матнӣ скрипт эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a popular dating app.",
+        "instruction_translated": "Номи як барномаи машҳури шиносоӣ.",
+        "category": null
+    },
+    {
+        "instruction": "Ge rerate 3 product ideas for a new mobile application.",
+        "instruction_translated": "3 идеяи маҳсулотро барои як барномаи нави мобилӣ аз нав арзёбӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a mindmap to represent the process of returning goods.",
+        "instruction_translated": "Харитаи зеҳниро барои нишон додани раванди баргардонидани молҳо эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a scary story in less than 200 words",
+        "instruction_translated": "Дар камтар аз 200 калима як ҳикояи даҳшатнок эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Tell me three notable features of the operating system, Windows 10.",
+        "instruction_translated": "Се хусусияти муҳими системаи амалиётии Windows 10-ро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the concept of \"political landscapes\".",
+        "instruction_translated": "Мафҳуми «манзараи сиёсӣ»-ро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Find 5 sentence patterns commonly used in English.",
+        "instruction_translated": "5 қолаби ҷумларо, ки одатан дар забони англисӣ истифода мешаванд, пайдо кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Draft an email to a singer requesting her to perform in a charity event.",
+        "instruction_translated": "Ба овозхон паёми электронӣ нависед ва аз ӯ хоҳиш кунед, ки дар чорабинии хайрия баромад кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast the two theories about the origin of the universe: Big Bang and Steady State.",
+        "instruction_translated": "Ду назарияро дар бораи пайдоиши коинот муқоиса ва муқоиса кунед: Таркиши бузург ва ҳолати устувор.",
+        "category": null
+    },
+    {
+        "instruction": "Write three sentences to describe the effect that television ads can have on a campaign.",
+        "instruction_translated": "Се ҷумла нависед, то таъсири таблиғоти телевизиониро ба маърака тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a data model for a driver on a car-sharing platform",
+        "instruction_translated": "Эҷоди модели додаҳо барои ронанда дар платформаи мубодилаи мошин",
+        "category": null
+    },
+    {
+        "instruction": "Describe the physical appearance of an elephant.",
+        "instruction_translated": "Намуди зоҳирии филро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Find an article about the Covid-19 vaccine.",
+        "instruction_translated": "Мақолаеро дар бораи ваксинаи Covid-19 пайдо кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an outline outlining the consequences of underrating teachers.",
+        "instruction_translated": "Нақшаеро тартиб диҳед, ки оқибатҳои паст задани баҳодиҳии муаллимонро шарҳ медиҳад.",
+        "category": null
+    },
+    {
+        "instruction": "What are the main steps used in Machine Learning?",
+        "instruction_translated": "Қадамҳои асосии истифодашуда дар омӯзиши мошинӣ кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Create a catchy slogan for a new mobile app that allows users to connect with friends and family.",
+        "instruction_translated": "Барои як барномаи нави мобилӣ шиори ҷолибе эҷод кунед, ки ба корбарон имкон медиҳад, ки бо дӯстон ва оила пайваст шаванд.",
+        "category": null
+    },
+    {
+        "instruction": "Suppose you are writing a story with the protagonist Sally. Describe her family.",
+        "instruction_translated": "Фарз кунед, ки шумо бо қаҳрамони асосӣ Салли ҳикоя менависед. Оилаи ӯро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a popular tennis player from the United States.",
+        "instruction_translated": "Номи теннисбози машҳури ИМА-ро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain why Apollo 11 astronauts were the first ones to land on the moon.",
+        "instruction_translated": "Фаҳмонед, ки чаро кайҳоннавардони Аполлон 11 аввалин шуда ба Моҳ фуруд омаданд.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the tone of the following statement: \"Do it or you will regret it\".",
+        "instruction_translated": "Оҳанги ибораи зеринро муайян кунед: «Ин корро кун, вагарна пушаймон мешавӣ».",
+        "category": null
+    },
+    {
+        "instruction": "Translate the phrase \"Life is a journey\" into a foreign language of your choice.",
+        "instruction_translated": "Ибораи &quot;Ҳаёт сафар аст&quot;-ро ба забони хориҷии интихобкардаатон тарҷума кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an algorithm to convert Fahrenheit to Celsius.",
+        "instruction_translated": "Алгоритмеро барои табдил додани Фаренгейт ба Селсий эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Translate the following sentence into Spanish: \"Can you tell me where the nearest grocery store is?\"",
+        "instruction_translated": "Ҷумлаи зеринро ба забони испанӣ тарҷума кунед: &quot;Метавонед ба ман бигӯед, ки наздиктарин мағозаи хӯрокворӣ дар куҷост?&quot;",
+        "category": null
+    },
+    {
+        "instruction": "What actions should a company take to prevent data breaches?",
+        "instruction_translated": "Ширкат бояд барои пешгирии вайронкунии маълумот чӣ чораҳо андешад?",
+        "category": null
+    },
+    {
+        "instruction": "List the US states that border Mexico.",
+        "instruction_translated": "Иёлотҳои ИМА-ро, ки бо Мексика ҳамсарҳад ҳастанд, номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Express the concept \"social change\" in three words.",
+        "instruction_translated": "Мафҳуми «тағйироти иҷтимоӣ»-ро бо се калима ифода кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the oxidation state of sulfur in sulfurous acid?",
+        "instruction_translated": "Дараҷаи оксидшавии сулфур дар кислотаи сулфур чӣ гуна аст?",
+        "category": null
+    },
+    {
+        "instruction": "Name any two open-source AI tools.",
+        "instruction_translated": "Ду асбоби кушодаасоси зеҳни сунъиро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast the two words, \"employ\" and \"hire\".",
+        "instruction_translated": "Ду калимаи «кор кардан» ва «киро кардан»-ро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Provide a set of instructions for a user to determine the area of a trapezoid.",
+        "instruction_translated": "Барои муайян кардани масоҳати трапетсия ба корбар маҷмӯи дастурҳоро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the difference between a porcupine and a hedgehog?",
+        "instruction_translated": "Фарқи байни мурғ ва хорпушт чист?",
+        "category": null
+    },
+    {
+        "instruction": "Why are coral reefs dying?",
+        "instruction_translated": "Чаро рифҳои марҷонӣ нобуд мешаванд?",
+        "category": null
+    },
+    {
+        "instruction": "Name two similarities between a tomato and an apple.",
+        "instruction_translated": "Ду монандии байни помидор ва себро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Build a news aggregator web application.",
+        "instruction_translated": "Барномаи веби агрегатори хабарҳоро эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a market segmentation plan for a luxury watch store",
+        "instruction_translated": "Нақшаи сегментатсияи бозорро барои мағозаи соатҳои боҳашамат таҳия кунед",
+        "category": null
+    },
+    {
+        "instruction": "Generate an example of an imaginative sentence that describes a moving object.",
+        "instruction_translated": "Мисоли ҷумлаи хаёлӣеро биёред, ки ашёи ҳаракаткунандаро тасвир мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Outline the steps involved in baking a lemon meringue pie.",
+        "instruction_translated": "Қадамҳои пухтани кулчаи меренгеи лимӯро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a quippy phrase to describe a prankster.",
+        "instruction_translated": "Барои тавсифи як шӯхбоз як ибораи ҷолиб эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name three important world leaders.",
+        "instruction_translated": "Се раҳбари муҳими ҷаҳонро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the differences between analog and digital signal processing.",
+        "instruction_translated": "Фарқи байни коркарди сигналҳои аналогӣ ва рақамиро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Give advice to a freshman student struggling with academics.",
+        "instruction_translated": "Ба донишҷӯи соли аввал, ки дар таҳсил душворӣ мекашад, маслиҳат диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a research question related to artificial intelligence.",
+        "instruction_translated": "Саволи тадқиқотиро дар бораи зеҳни сунъӣ тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Why is it important to keep an open mind?",
+        "instruction_translated": "Чаро нигоҳ доштани ақли кушода муҳим аст?",
+        "category": null
+    },
+    {
+        "instruction": "Explain what is data mining",
+        "instruction_translated": "Шарҳ диҳед, ки истихроҷи маълумот чист",
+        "category": null
+    },
+    {
+        "instruction": "Please write a formal apology for being late to the meeting.",
+        "instruction_translated": "Лутфан, барои дер мондан ба ҷаласа узрхоҳии расмӣ нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a popular smartphone brand.",
+        "instruction_translated": "Бренди машҳури смартфонро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name 5 human body organs",
+        "instruction_translated": "5 узви бадани инсонро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Generate a password of 8 characters.",
+        "instruction_translated": "Пароли 8-рақама эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Suggest a title for a book about the power of resilience.",
+        "instruction_translated": "Барои китобе дар бораи қудрати устуворӣ унвон пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a poem about urban lifestyle",
+        "instruction_translated": "Дар бораи тарзи ҳаёти шаҳрӣ шеър эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Compose a sonnet about the beauty of nature.",
+        "instruction_translated": "Дар бораи зебоии табиат сонет эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compose a paragraph about the Hindenburg Disaster.",
+        "instruction_translated": "Дар бораи фоҷиаи Ҳинденбург як параграф нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Develop a list of criteria for selecting an online learning platform.",
+        "instruction_translated": "Рӯйхати меъёрҳоро барои интихоби платформаи омӯзиши онлайн таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a headline for an article discussing the importance of backup systems.",
+        "instruction_translated": "Сарлавҳаеро барои мақолае эҷод кунед, ки дар он аҳамияти системаҳои нусхабардорӣ баррасӣ мешавад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a process to form an ice sculpture.",
+        "instruction_translated": "Раванди сохтани ҳайкалчаи яхро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a mathematical equation.",
+        "instruction_translated": "Сохтани муодилаи математикӣ.",
+        "category": null
+    },
+    {
+        "instruction": "Analyze the following sentence: \n\n\"The cat slipped away from the restless dog.\"",
+        "instruction_translated": "Ҷумлаи зеринро таҳлил кунед: «Гурба аз саги беқарор фирор кард».",
+        "category": null
+    },
+    {
+        "instruction": "Generate a warning message that could be used in a chatbot.",
+        "instruction_translated": "Паёми огоҳкунандаеро эҷод кунед, ки метавонад дар чатбот истифода шавад.",
+        "category": null
+    },
+    {
+        "instruction": "Arrange the following words in alphabetical order: farm, time, duck, cup.",
+        "instruction_translated": "Калимаҳои зеринро бо тартиби алифбо ҷойгир кунед: farm, time, duck, cup.",
+        "category": null
+    },
+    {
+        "instruction": "Give two examples of a species of animal found in Australia.",
+        "instruction_translated": "Ду мисоли намуди ҳайвонотеро, ки дар Австралия ёфт мешаванд, биёред.",
+        "category": null
+    },
+    {
+        "instruction": "How many points did the Blue Jays score in their last game?",
+        "instruction_translated": "&quot;Блу Ҷейс&quot; дар бозии охирини худ чанд хол ба даст овард?",
+        "category": null
+    },
+    {
+        "instruction": "Identify the subject in the sentence: \"She played the guitar on the porch.\"",
+        "instruction_translated": "Дар ҷумла мавзӯъро муайян кунед: &quot;Вай дар айвон гитара менавозид.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Explain how machine learning is used in customer service.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна омӯзиши мошинӣ дар хидматрасонии муштариён истифода мешавад.",
+        "category": null
+    },
+    {
+        "instruction": "Create a fictional character and provide a brief description of them.",
+        "instruction_translated": "Як қаҳрамони бадеиро эҷод кунед ва тавсифи мухтасари онҳоро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe how a basic computer virus works.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна як вируси компютерии оддӣ кор мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an appropriate response to this instruction: \"Write a story that starts with the phrase 'It was a cold winter night.'\"",
+        "instruction_translated": "Ба ин дастур посухи мувофиқ диҳед: «Ҳикояе нависед, ки бо ибораи «Шаби сарди зимистон буд» оғоз шавад».",
+        "category": null
+    },
+    {
+        "instruction": "Question: What is the longest river in Europe? Answer",
+        "instruction_translated": "Савол: Дарозтарин дарёи Аврупо кадом аст? Ҷавоб",
+        "category": null
+    },
+    {
+        "instruction": "Create a haiku with the following words:\n\"mountain,\" \"clouds,\" \"snow\"",
+        "instruction_translated": "Бо калимаҳои зерин ҳайку эҷод кунед: «кӯҳ», «абрҳо», «барф».",
+        "category": null
+    },
+    {
+        "instruction": "Explain the main parts of a nuclear power plant.",
+        "instruction_translated": "Қисмҳои асосии нерӯгоҳи барқи атомиро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Give examples of three algorithms used in data science",
+        "instruction_translated": "Мисолҳои се алгоритми истифодашавандаро дар илми додаҳо биёред",
+        "category": null
+    },
+    {
+        "instruction": "Construct a regular expression that matches any 7 digit number.",
+        "instruction_translated": "Ифодаи муқаррариро созед, ки ба ҳар як рақами 7-рақама мувофиқат кунад.",
+        "category": null
+    },
+    {
+        "instruction": "How many syllables are present in the word \"dispite\"",
+        "instruction_translated": "Дар калимаи &quot;dispeite&quot; чанд ҳиҷо мавҷуд аст?",
+        "category": null
+    },
+    {
+        "instruction": "Calculate the area of a square with sides that measure 4 cm",
+        "instruction_translated": "Масоҳати чоркунҷаро бо паҳлӯҳои 4 см ҳисоб кунед",
+        "category": null
+    },
+    {
+        "instruction": "Write a haiku poem that reflects the beauty of nature.",
+        "instruction_translated": "Шеъри ҳайку нависед, ки зебоии табиатро инъикос кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the history of humans in space.",
+        "instruction_translated": "Таърихи парвози инсон дар кайҳонро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Name 3 recognizable Microsoft products.",
+        "instruction_translated": "Се маҳсулоти шинохташудаи Microsoft-ро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a pun involving animals.",
+        "instruction_translated": "Як калимаи бозӣ бо иштироки ҳайвонот эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the lifestyle of a hermit.",
+        "instruction_translated": "Тарзи ҳаёти як зоҳидро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a programming instruction for an array.",
+        "instruction_translated": "Дастури барномасозиро барои массив эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a computer game for children about different animal species in the Amazon rainforest.",
+        "instruction_translated": "Барои кӯдакон дар бораи намудҳои гуногуни ҳайвонот дар ҷангали тропикии Амазонка бозии компютерӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Categorize the following musical genres: rap, pop, rock, and classical.",
+        "instruction_translated": "Жанрҳои мусиқии зеринро ҷудо кунед: рэп, поп, рок ва классикӣ.",
+        "category": null
+    },
+    {
+        "instruction": "Design a logo using vector graphics.",
+        "instruction_translated": "Бо истифода аз графикаи векторӣ логотип тарроҳӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an appropriate response if someone asked you to create a budget.",
+        "instruction_translated": "Агар касе аз шумо хоҳиш кунад, ки буҷа тартиб диҳед, посухи мувофиқ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "How to create an email template?",
+        "instruction_translated": "Чӣ тавр шаблони почтаи электрониро эҷод кардан мумкин аст?",
+        "category": null
+    },
+    {
+        "instruction": "Cite a benefit of using modern deep learning architectures",
+        "instruction_translated": "Бартарии истифодаи меъмориҳои муосири омӯзиши амиқро қайд кунед",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of product ideas related to energy efficiency.",
+        "instruction_translated": "Рӯйхати ғояҳои маҳсулотро, ки ба самаранокии энергетикӣ алоқаманданд, тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Make a list of common elements present in a modern web page.",
+        "instruction_translated": "Рӯйхати унсурҳои маъмулеро, ки дар саҳифаи веби муосир мавҷуданд, тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast air and water",
+        "instruction_translated": "Ҳаво ва обро муқоиса ва фарқ кардан",
+        "category": null
+    },
+    {
+        "instruction": "Who won the Nobel Prize in Economics in 2019?",
+        "instruction_translated": "Ҷоизаи Нобелро дар соҳаи иқтисод дар соли 2019 кӣ ба даст овард?",
+        "category": null
+    },
+    {
+        "instruction": "What are the main steps to writing an essay?",
+        "instruction_translated": "Қадамҳои асосии навиштани эссе кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Which problems can be addressed by deep learning?",
+        "instruction_translated": "Кадом мушкилотро метавон бо омӯзиши амиқ ҳал кард?",
+        "category": null
+    },
+    {
+        "instruction": "Find a library that provides an API for natural language processing.",
+        "instruction_translated": "Китобхонаеро ёбед, ки API-ро барои коркарди забони табиӣ пешниҳод мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Create a metaphor that compares two unrelated items.",
+        "instruction_translated": "Як истиора эҷод кунед, ки ду ашёи бо ҳам алоқамандро муқоиса мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Draft a set of guidelines for a team meeting.",
+        "instruction_translated": "Барои ҷаласаи гурӯҳӣ маҷмӯи дастурҳоро таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a side effect that could occur from taking a drug.",
+        "instruction_translated": "Таъсири манфиеро, ки метавонад аз истеъмоли дору ба вуҷуд ояд, тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a regular expression that can match strings of any length consisting of only the letters a,b and c",
+        "instruction_translated": "Ибораи муқаррариро эҷод кунед, ки метавонад сатрҳои ҳар дарозӣ, ки танҳо аз ҳарфҳои a, b ва c иборатанд, мувофиқат кунад",
+        "category": null
+    },
+    {
+        "instruction": "List three software development methods.",
+        "instruction_translated": "Се усули таҳияи нармафзорро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Multiply 12 and 11.",
+        "instruction_translated": "12 ва 11-ро зарб кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a hypothetical scenario involving a pandemic",
+        "instruction_translated": "Эҷоди сенарияи фарзиявӣ бо пандемия",
+        "category": null
+    },
+    {
+        "instruction": "Think of a creative way to transport a car from Denver to Texas.",
+        "instruction_translated": "Роҳи эҷодии интиқоли мошинро аз Денвер ба Техас фикр кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Edit this sentence to make it more direct:\n\"I was wondering if you could help me with something.\"",
+        "instruction_translated": "Ин ҷумларо таҳрир кунед, то онро мустақимтар гардонед: &quot;Ман мехостам фикр кунам, ки оё шумо метавонед ба ман дар коре кумак кунед.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Who wrote 'Harry Potter'?",
+        "instruction_translated": "&quot;Гарри Поттер&quot;-ро кӣ навиштааст?",
+        "category": null
+    },
+    {
+        "instruction": "What word best describes the definition of \"integrity\"?",
+        "instruction_translated": "Кадом калима таърифи &quot;ростқавлӣ&quot;-ро беҳтарин тасвир мекунад?",
+        "category": null
+    },
+    {
+        "instruction": "Write a narrative that contrasts two cultures.",
+        "instruction_translated": "Қиссае нависед, ки ду фарҳангро муқоиса кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Given a dataset of customer records, write a function that filters out the customers from California.",
+        "instruction_translated": "Бо назардошти маҷмӯи додаҳои сабтҳои муштариён, функсияеро нависед, ки муштариёнро аз Калифорния филтр мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe how a customer might feel when they receive excellent customer service.",
+        "instruction_translated": "Тавсиф кунед, ки муштарӣ ҳангоми гирифтани хидматрасонии аъло ба мизоҷон чӣ эҳсос карда метавонад.",
+        "category": null
+    },
+    {
+        "instruction": "Create a rock-paper-scissor game in python.",
+        "instruction_translated": "Дар Python бозии санг-коғаз-қайчӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Analyze the benefits of digital marketing",
+        "instruction_translated": "Бартариҳои маркетинги рақамиро таҳлил кунед",
+        "category": null
+    },
+    {
+        "instruction": "Compare the features of HTML and CSS.",
+        "instruction_translated": "Хусусиятҳои HTML ва CSS-ро муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What steps should you take to improve your website's performance?",
+        "instruction_translated": "Барои беҳтар кардани самаранокии вебсайти худ кадом қадамҳоро бояд андешед?",
+        "category": null
+    },
+    {
+        "instruction": "Describe a roller coaster in three sentences.",
+        "instruction_translated": "Як ролики сунъиро дар се ҷумла тасвир кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a novel story about a magical animal.",
+        "instruction_translated": "Дар бораи ҳайвони ҷодугарӣ як ҳикояи нав эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Classify the following sentence as a statement, command, exclamation or question: \"Did you understand the question?\"",
+        "instruction_translated": "Ҷумлаи зеринро ҳамчун изҳорот, фармон, нидо ё савол тасниф кунед: &quot;Шумо саволро фаҳмидед?&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Describe how a budget can help you achieve your financial goals.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна буҷет метавонад ба шумо дар расидан ба ҳадафҳои молиявии шумо кӯмак расонад.",
+        "category": null
+    },
+    {
+        "instruction": "Rewrite this sentence using a different but equivalent form:\n\"Living in the city is full of noise.\"",
+        "instruction_translated": "Ин ҷумларо бо истифода аз шакли дигар, вале баробар аз нав нависед: &quot;Зиндагӣ дар шаҳр пур аз садо аст.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Describe how data mining can be used in marketing.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна истихроҷи додаҳоро дар маркетинг истифода бурдан мумкин аст.",
+        "category": null
+    },
+    {
+        "instruction": "Name a film that stars Tom Hanks.",
+        "instruction_translated": "Филмеро номбар кунед, ки дар он Том Хэнкс нақш бозидааст.",
+        "category": null
+    },
+    {
+        "instruction": "State one example of an ironic statement.",
+        "instruction_translated": "Як мисоли изҳороти иронӣ биёред.",
+        "category": null
+    },
+    {
+        "instruction": "Rewrite the sentence in the past tense\nI miss you",
+        "instruction_translated": "Ҷумларо дар замони гузашта аз нав нависед &quot;Ман туро пазмон шудам&quot;",
+        "category": null
+    },
+    {
+        "instruction": "What is the maximum altitude a hot air balloon can reach?",
+        "instruction_translated": "Баландтарин баландие, ки пуфаки ҳавоии гарм метавонад ба он бирасад, кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Explain the concept of a \"heartbeat\" in terms of database management.",
+        "instruction_translated": "Мафҳуми &quot;тапиши дил&quot;-ро аз нигоҳи идоракунии пойгоҳи додаҳо шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare the dietary needs of cats and dogs.",
+        "instruction_translated": "Ниёзҳои ғизоии гурбаҳо ва сагҳоро муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Make a statement about entrepreneurship",
+        "instruction_translated": "Дар бораи соҳибкорӣ изҳорот диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Generate a story with these keywords: campfire, tent, canoe.",
+        "instruction_translated": "Бо ин калимаҳои калидӣ ҳикоя эҷод кунед: оташдон, хайма, каноэ.",
+        "category": null
+    },
+    {
+        "instruction": "Give a reason why artificial intelligence (AI) is important for cyber security.",
+        "instruction_translated": "Сабаби муҳим будани зеҳни сунъӣ (ЗИ)-ро барои амнияти киберӣ шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Solve this equation\n3 + 2 = ?",
+        "instruction_translated": "Ин муодилаи 3 + 2 = ? -ро ҳал кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a sports headline describing the popular football event.",
+        "instruction_translated": "Сарлавҳаи варзишӣ нависед, ки чорабинии машҳури футболро тавсиф мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Identify three methods of securing a computer network",
+        "instruction_translated": "Се усули таъмини амнияти шабакаи компютериро муайян кунед",
+        "category": null
+    },
+    {
+        "instruction": "Collect 5 facts about koalas",
+        "instruction_translated": "5 далелро дар бораи коалаҳо ҷамъ кунед",
+        "category": null
+    },
+    {
+        "instruction": "Come up with an example of a person exhibiting traits from the Big 5 personality traits.",
+        "instruction_translated": "Мисоле аз шахсеро пешниҳод кунед, ки хусусиятҳои шахсияти 5-гонаи бузургро нишон медиҳад.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast public and private schools.",
+        "instruction_translated": "Мактабҳои давлатӣ ва хусусиро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a positive affirmation for an athlete.",
+        "instruction_translated": "Барои варзишгар эҳсоси мусбат эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a list of steps to take in order to keep a computer secure.",
+        "instruction_translated": "Рӯйхати қадамҳоеро тартиб диҳед, ки бояд барои таъмини амнияти компютер анҷом дода шаванд.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of popular tourist spots in New York City.",
+        "instruction_translated": "Рӯйхати маконҳои машҳури сайёҳиро дар Ню Йорк тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Give a 3-sentence explanation of the concept of Machine Learning.",
+        "instruction_translated": "Шарҳи се ҷумлаи мафҳуми омӯзиши мошиниро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the basic idea behind GPT models?",
+        "instruction_translated": "Идеяи асосии моделҳои GPT чист?",
+        "category": null
+    },
+    {
+        "instruction": "Generate a story where the protagonist goes to a giant door and unlocks it using a magical key.",
+        "instruction_translated": "Қиссаеро эҷод кунед, ки дар он қаҳрамон ба назди дари бузурге меравад ва онро бо истифода аз калиди ҷодугарӣ мекушояд.",
+        "category": null
+    },
+    {
+        "instruction": "Fill in the blank to make a complete sentence: \"He ____ his dinner.\"",
+        "instruction_translated": "Ҷойи холиро пур кунед, то ҷумлаи пурра созед: &quot;Ӯ шоми худро ____ хӯрок дод.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Give two examples of how digital technology can be used in the retail industry.",
+        "instruction_translated": "Ду мисол биёред, ки чӣ гуна технологияи рақамиро дар саноати чакана истифода бурдан мумкин аст.",
+        "category": null
+    },
+    {
+        "instruction": "Give an example of a sentence that uses a metaphor.",
+        "instruction_translated": "Мисоле аз ҷумлае биёред, ки дар он истиора истифода шудааст.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the star formation process.",
+        "instruction_translated": "Раванди ташаккули ситораҳоро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Develop an AI system to monitor credit card usage.",
+        "instruction_translated": "Таҳияи системаи зеҳни сунъӣ барои назорат кардани истифодаи кортҳои кредитӣ.",
+        "category": null
+    },
+    {
+        "instruction": "Suggest 5 methods for solving an optimization problem.",
+        "instruction_translated": "5 усули ҳалли масъалаи оптимизатсияро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a 5-word tagline for the following product: a computer with advanced features.",
+        "instruction_translated": "Шиори 5-калимаеро барои маҳсулоти зерин нависед: компютер бо хусусиятҳои пешрафта.",
+        "category": null
+    },
+    {
+        "instruction": "Convert 1 mile to kilometers.",
+        "instruction_translated": "1 милро ба километр табдил диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a famous scientist who contributed to the development of the internet.",
+        "instruction_translated": "Номи яке аз олимони машҳурро, ки дар рушди интернет саҳм гузоштааст, нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain what a logical syllogism is.",
+        "instruction_translated": "Шарҳ диҳед, ки силлогизми мантиқӣ чист.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a SQL query to print the customer information sorted by customer name in ascending order.",
+        "instruction_translated": "Барои чопи маълумоти муштарӣ, ки аз рӯи номи муштарӣ бо тартиби афзоиш ҷудо карда шудааст, дархости SQL созед.",
+        "category": null
+    },
+    {
+        "instruction": "Make a checklist of the items needed for the upcoming camping trip.",
+        "instruction_translated": "Рӯйхати ашёҳои заруриро барои сафари дарпешистодаи кемпинг тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Generated a short story that features two people in a conflict.",
+        "instruction_translated": "Ҳикояи кӯтоҳеро эҷод кард, ки дар он ду нафар дар низоъ нақл мекунанд.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a passcode that meets these requirements: at least 8 characters, one capital letter, one lowercase letter, one number, and one special character",
+        "instruction_translated": "Рамзи паролеро эҷод кунед, ки ба ин талабот ҷавобгӯ бошад: ҳадди аққал 8 аломат, як ҳарфи калон, як ҳарфи хурд, як рақам ва як аломати махсус",
+        "category": null
+    },
+    {
+        "instruction": "Create a list of eight clothing items an individual should have in their wardrobe",
+        "instruction_translated": "Рӯйхати ҳашт адад либосеро тартиб диҳед, ки шахс бояд дар ҷевонаш дошта бошад",
+        "category": null
+    },
+    {
+        "instruction": "Compare the judicial system in India and USA.",
+        "instruction_translated": "Низоми судии ИМА ва Ҳиндустонро муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "List three symptoms of a broken air conditioner.",
+        "instruction_translated": "Се аломати вайрон шудани кондитсионерро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate 3 rules for an Organization.",
+        "instruction_translated": "Барои як созмон 3 қоида эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a poster that explains why pollution is bad.",
+        "instruction_translated": "Плакатеро эҷод кунед, ки сабаби ифлосшавии муҳити зистро шарҳ диҳад.",
+        "category": null
+    },
+    {
+        "instruction": "Make a creative drawing of a pair of shoes.",
+        "instruction_translated": "Расми эҷодии як ҷуфт пойафзолро кашед.",
+        "category": null
+    },
+    {
+        "instruction": "Propose a set of rules for an online forum.",
+        "instruction_translated": "Маҷмӯи қоидаҳоро барои форуми онлайн пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Scramble the letters 'rocisex' and name a word",
+        "instruction_translated": "Ҳарфҳои &quot;rocisex&quot;-ро омехта кунед ва калимаеро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "What would you do if you won $1 million?",
+        "instruction_translated": "Агар шумо 1 миллион доллар бурд мекардед, чӣ кор мекардед?",
+        "category": null
+    },
+    {
+        "instruction": "Produce a web page which provides details of the events in the French Revolution.",
+        "instruction_translated": "Саҳифаи веберо эҷод кунед, ки тафсилоти рӯйдодҳои Инқилоби Фаронсаро пешниҳод мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Create a hashtag for a new marketing campaign.",
+        "instruction_translated": "Барои як маъракаи нави маркетингӣ хэштег эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name two ways to reduce the environmental effects of human activities.",
+        "instruction_translated": "Ду роҳи кам кардани таъсири фаъолияти инсонро ба муҳити зист номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Output a piece of code that will print out a list containing the numbers from 1 to 10.",
+        "instruction_translated": "Як пораи кодеро, ки рӯйхатеро, ки рақамҳоро аз 1 то 10 дар бар мегирад, чоп мекунад, бароред.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a scenario in which AI technology can help diagnose a medical condition.",
+        "instruction_translated": "Сенарияеро тавсиф кунед, ки дар он технологияи зеҳни сунъӣ метавонад ба ташхиси ҳолати тиббӣ кумак кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Categorize the word \"converse\"",
+        "instruction_translated": "Калимаи &quot;converse&quot;-ро гурӯҳбандӣ кунед",
+        "category": null
+    },
+    {
+        "instruction": "Discuss the potential implications of the given COVID-19 vaccine on international trade.",
+        "instruction_translated": "Оқибатҳои эҳтимолии ваксинаи COVID-19-и додашударо ба тиҷорати байналмилалӣ муҳокима кунед.",
+        "category": null
+    },
+    {
+        "instruction": "List 5 ways technology has impacted the world",
+        "instruction_translated": "5 роҳеро номбар кунед, ки технология ба ҷаҳон таъсир расонидааст",
+        "category": null
+    },
+    {
+        "instruction": "Find the word that rhymes with \"cat\".",
+        "instruction_translated": "Калимаеро ёбед, ки бо калимаи &quot;гурба&quot; ҳамқофия аст.",
+        "category": null
+    },
+    {
+        "instruction": "Create a summative paragraph giving your opinion on the article.",
+        "instruction_translated": "Як параграфи ҷамъбастӣ тартиб диҳед, ки андешаи худро дар бораи мақола баён мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "List 3 popular smartphone models",
+        "instruction_translated": "Се модели машҳури смартфонро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Give a logical reason why this statement might be true: All dogs love to run.",
+        "instruction_translated": "Сабаби мантиқии дуруст будани ин изҳоротро бигӯед: Ҳамаи сагҳо давиданро дӯст медоранд.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a child-friendly slogan for a health food company.",
+        "instruction_translated": "Барои як ширкати хӯроквории солим шиори дӯстона барои кӯдаконро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Make a list of 5 foods that are native to Mexico.",
+        "instruction_translated": "Рӯйхати 5 хӯрокеро тартиб диҳед, ки ватани Мексика мебошанд.",
+        "category": null
+    },
+    {
+        "instruction": "Name a strategy game that involves movement of pieces around a board.",
+        "instruction_translated": "Номи бозии стратегӣ, ки ҳаракати қисмҳоро дар атрофи тахта дар бар мегирад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the contributions of deep learning to the field of natural language processing.",
+        "instruction_translated": "Саҳми омӯзиши амиқро дар соҳаи коркарди забони табиӣ тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Calculate the midpoint of the line segment connecting (9, -7) to (-13, -2).",
+        "instruction_translated": "Нуқтаи миёнаи порчаи хати пайвасткунандаро (9, -7) ба (-13, -2) ҳисоб кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the activities that take place in India’s Thar Desert.",
+        "instruction_translated": "Фаъолиятҳоеро, ки дар биёбони Тари Ҳиндустон сурат мегиранд, муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "How can a company increase employee productivity?",
+        "instruction_translated": "Чӣ гуна як ширкат метавонад ҳосилнокии кормандонро афзоиш диҳад?",
+        "category": null
+    },
+    {
+        "instruction": "Determine the sum of the series 1 + 1/2 + 1/3 + ...",
+        "instruction_translated": "Ҷамъи силсилаи 1 + 1/2 + 1/3 + ... -ро муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What are the advantages of a decision tree?",
+        "instruction_translated": "Афзалиятҳои дарахти қабули қарорҳо кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Describe what the sun looks like",
+        "instruction_translated": "Бигӯед, ки офтоб чӣ гуна аст",
+        "category": null
+    },
+    {
+        "instruction": "Name two effects caused by deforestation in the Amazon rainforest.",
+        "instruction_translated": "Ду таъсири манфии буридани ҷангалҳо дар ҷангалҳои тропикии Амазонкаро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an innovative solution to reduce food waste.",
+        "instruction_translated": "Як роҳи ҳалли инноватсионӣ барои кам кардани партовҳои ғизоӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Classify the following sentence: The toy was red and blue.",
+        "instruction_translated": "Ҷумлаҳои зеринро тасниф кунед: Бозича сурх ва кабуд буд.",
+        "category": null
+    },
+    {
+        "instruction": "Find the meaning of theword \"epiphany\".",
+        "instruction_translated": "Маънои калимаи &quot;эпифания&quot;-ро ёбед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the fastest mammal on land?",
+        "instruction_translated": "Ширхӯри зудтарин дар рӯи замин кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Name the countries that are in Europe.",
+        "instruction_translated": "Кишварҳоеро, ки дар Аврупо ҷойгиранд, номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a short story between 30 to 50 words.",
+        "instruction_translated": "Ҳикояи кӯтоҳе аз 30 то 50 калима нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe how to write a marketing email.",
+        "instruction_translated": "Чӣ тавр почтаи электронии маркетингӣ нависед, тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write an accurate and concise definition for the term ecosystem.",
+        "instruction_translated": "Таърифи дақиқ ва мухтасари истилоҳи экосистемаро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Design a GPT model to generate commands for a robot to pick up red cubes.",
+        "instruction_translated": "Модели GPT-ро тарҳрезӣ кунед, то фармонҳоро барои гирифтани мукаабҳои сурх барои робот тавлид кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Develop a creative solution to reduce food waste.",
+        "instruction_translated": "Барои кам кардани партовҳои ғизоӣ як роҳи ҳалли эҷодӣ таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Summarize the importance of the Civil Rights Movement.",
+        "instruction_translated": "Аҳамияти Ҳаракати ҳуқуқи шаҳрвандиро ҷамъбаст кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the difference between \"workplace bullying\" and \"harassment\"?",
+        "instruction_translated": "Фарқи байни &quot;таъқиб дар ҷои кор&quot; ва &quot;таъқиб дар ҷои кор&quot; чист?",
+        "category": null
+    },
+    {
+        "instruction": "What is the latest news about the President?",
+        "instruction_translated": "Хабарҳои охирин дар бораи президенти кунунӣ чист?",
+        "category": null
+    },
+    {
+        "instruction": "Give me three tips on how to maintain productivity while working from home.",
+        "instruction_translated": "Ба ман се маслиҳат диҳед, ки чӣ гуна ҳангоми кор аз хона ҳосилнокиро нигоҳ дорам.",
+        "category": null
+    },
+    {
+        "instruction": "Choose the correct answer: Is a blue whale a mammal or a fish?",
+        "instruction_translated": "Ҷавоби дурустро интихоб кунед: Наҳанги кабуд ширхӯр аст ё моҳӣ?",
+        "category": null
+    },
+    {
+        "instruction": "What items could a person put in an emergency kit?",
+        "instruction_translated": "Кадом чизҳоро шахс метавонад дар маҷмӯаи ёрии таъҷилӣ гузорад?",
+        "category": null
+    },
+    {
+        "instruction": "Name three countries that speak French.",
+        "instruction_translated": "Се кишвареро номбар кунед, ки дар онҳо забони фаронсавӣ ҳарф мезананд.",
+        "category": null
+    },
+    {
+        "instruction": "What is the active form of the verb 'to be'?",
+        "instruction_translated": "Шакли фаъоли феъли &#39;to be&#39; кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Find a word that starts with the letter \"b\" and has 10 letters",
+        "instruction_translated": "Калимаеро ёбед, ки бо ҳарфи &quot;б&quot; сар мешавад ва 10 ҳарф дорад",
+        "category": null
+    },
+    {
+        "instruction": "Solve the following linear equation: 2x + 5 = 20",
+        "instruction_translated": "Муодилаи хаттии зеринро ҳал кунед: 2x + 5 = 20",
+        "category": null
+    },
+    {
+        "instruction": "Explain the importance of the United Nations in global peace and security.",
+        "instruction_translated": "Аҳамияти Созмони Милали Муттаҳидро дар таъмини сулҳ ва амнияти ҷаҳонӣ шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify a sentence that uses alliteration",
+        "instruction_translated": "Ҷумлаеро муайян кунед, ки дар он аллитератсия истифода шудааст",
+        "category": null
+    },
+    {
+        "instruction": "Answer this question: How do search engines work?",
+        "instruction_translated": "Ба ин савол ҷавоб диҳед: Системаҳои ҷустуҷӯӣ чӣ гуна кор мекунанд?",
+        "category": null
+    },
+    {
+        "instruction": "Explain why governments may choose to censor some content on the Internet.",
+        "instruction_translated": "Шарҳ диҳед, ки чаро ҳукуматҳо метавонанд баъзе мундариҷаро дар Интернет сензура кунанд.",
+        "category": null
+    },
+    {
+        "instruction": "Write an article that educates readers on the ethical considerations of robotics",
+        "instruction_translated": "Мақолае нависед, ки хонандагонро дар бораи мулоҳизаҳои ахлоқии робототехника огоҳ созад.",
+        "category": null
+    },
+    {
+        "instruction": "Imagine you are on a mission to Mars and write a diary entry about the experience.",
+        "instruction_translated": "Тасаввур кунед, ки шумо дар сафари Миррих ҳастед ва дар бораи ин таҷриба дар рӯзнома сабти ном кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the type of adjective used in \"That is a beautiful sunset\":",
+        "instruction_translated": "Навъи сифатеро муайян кунед, ки дар ҷумлаи &quot;That is a beautiful sunset&quot; истифода шудааст:",
+        "category": null
+    },
+    {
+        "instruction": "Write a tweet about customer service.",
+        "instruction_translated": "Дар бораи хидматрасонии муштариён твит нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of ten items needed for camping.",
+        "instruction_translated": "Рӯйхати даҳ ашёеро тартиб диҳед, ки барои истироҳати хаймазанӣ лозиманд.",
+        "category": null
+    },
+    {
+        "instruction": "Talk about the Renaissance in Europe.",
+        "instruction_translated": "Дар бораи Ренессанс дар Аврупо сӯҳбат кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a new innovative technology.",
+        "instruction_translated": "Як технологияи нави инноватсиониро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain how voice search technology works.",
+        "instruction_translated": "Фаҳмонед, ки технологияи ҷустуҷӯи овозӣ чӣ гуна кор мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a creative promotion strategy to increase sales.",
+        "instruction_translated": "Барои афзоиши фурӯш, як стратегияи эҷодии таблиғотӣ таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the purpose of multi-label classification?",
+        "instruction_translated": "Мақсади таснифоти бисёрфунксионалӣ чист?",
+        "category": null
+    },
+    {
+        "instruction": "Name two features of a reliable e-commerce website",
+        "instruction_translated": "Ду хусусияти вебсайти боэътимоди тиҷорати электрониро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Create a data set of 10 cities and the corresponding population.",
+        "instruction_translated": "Маҷмӯи маълумотро аз 10 шаҳр ва аҳолии мувофиқ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What strategies can a government use to reduce air pollution?",
+        "instruction_translated": "Ҳукумат барои коҳиш додани ифлосшавии ҳаво аз кадом стратегияҳо истифода карда метавонад?",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of steps for doing research on the Internet.",
+        "instruction_translated": "Рӯйхати қадамҳоро барои анҷом додани таҳқиқот дар Интернет тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a procedural text on how to make a peanut butter and jelly sandwich.",
+        "instruction_translated": "Дар бораи чӣ гуна тайёр кардани сэндвич аз равғани арахис ва желе матни расмиётӣ нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a popular activity people do in the summer.",
+        "instruction_translated": "Фаъолияти маъмулеро, ки одамон дар тобистон анҷом медиҳанд, номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the computational process of gradient descent with respect to linear regression",
+        "instruction_translated": "Раванди ҳисобкунии коҳиши градиентро нисбат ба регрессияи хаттӣ шарҳ диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Find a recipe for banana bread.",
+        "instruction_translated": "Дорухат барои нони бананро пайдо кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the best way to help children learn information quickly and effectively?",
+        "instruction_translated": "Роҳи беҳтарини кӯмак ба кӯдакон барои зуд ва самаранок аз худ кардани маълумот кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Create an email marketing campaign to promote a new product.",
+        "instruction_translated": "Барои таблиғи маҳсулоти нав як маъракаи маркетинги почтаи электронӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a time you had to devise a creative solution for a problem.",
+        "instruction_translated": "Вақтеро тасвир кунед, ки шумо бояд роҳи ҳалли эҷодӣ барои мушкилотро пайдо мекардед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the character Boba Fett in Star Wars.",
+        "instruction_translated": "Қаҳрамон Боба Феттро дар филми &quot;Ҷангҳои ситораӣ&quot; тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the most famous painting by Vincent van Gogh.",
+        "instruction_translated": "Машҳуртарин расми Винсент ван Гогро муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the usage of an ontology in artificial intelligence.",
+        "instruction_translated": "Истифодаи онтологияро дар зеҳни сунъӣ шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a response to the following customer review\n\nThe customer service was really slow",
+        "instruction_translated": "Ба баррасии зерини муштариён посух диҳед. Хизматрасонии муштариён хеле суст буд.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the difference between systematic and unsystematic risk",
+        "instruction_translated": "Фарқи байни хатари систематикӣ ва ғайрисистематикиро шарҳ диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Generate an input data set that has three members and five attributes.",
+        "instruction_translated": "Маҷмӯи маълумоти вурудиро эҷод кунед, ки се узв ва панҷ атрибут дорад.",
+        "category": null
+    },
+    {
+        "instruction": "Write a simile to compare two of the following words: moonlight, snow, wind.",
+        "instruction_translated": "Барои муқоисаи ду калимаи зерин як қиёс нависед: нури моҳ, барф, шамол.",
+        "category": null
+    },
+    {
+        "instruction": "What is the Difference between Electromagnetic and Gravitational Wave?",
+        "instruction_translated": "Фарқи байни мавҷи электромагнитӣ ва мавҷи ҷозибавӣ чист?",
+        "category": null
+    },
+    {
+        "instruction": "What is the purpose of an aperture in a camera lens?",
+        "instruction_translated": "Мақсади диафрагма дар линзаи камера чист?",
+        "category": null
+    },
+    {
+        "instruction": "What is the scoping rule of a variable?",
+        "instruction_translated": "Қоидаи доираи муайянкунии тағйирёбанда чист?",
+        "category": null
+    },
+    {
+        "instruction": "What is the Chinese equivalent of \"Hello\" or \"Good day\"?",
+        "instruction_translated": "Муодили чинии &quot;Салом&quot; ё &quot;Рӯзи хуш&quot; чист?",
+        "category": null
+    },
+    {
+        "instruction": "List five objects found in a kitchen.",
+        "instruction_translated": "Панҷ ашёеро, ки дар ошхона ёфт шудаанд, номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Calculate the average of the following numbers: 1, 3, 7",
+        "instruction_translated": "Миёнаи рақамҳои зеринро ҳисоб кунед: 1, 3, 7",
+        "category": null
+    },
+    {
+        "instruction": "What are the potential benefits of AI in healthcare?",
+        "instruction_translated": "Манфиатҳои эҳтимолии зеҳни сунъӣ дар соҳаи тандурустӣ кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Describe a situation where a security breach results in data being stolen.",
+        "instruction_translated": "Ҳолатеро тавсиф кунед, ки дар он вайронкунии амният боиси дуздии маълумот мегардад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe one way to make sure your passwords remain secure.",
+        "instruction_translated": "Як роҳеро барои бехатар нигоҳ доштани паролҳои худ тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Is the following statement true or false? Cats cannot taste sweet food.",
+        "instruction_translated": "Оё изҳороти зерин дуруст аст ё дурӯғ? Гурбаҳо таъми хӯроки ширинро ҳис карда наметавонанд.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the different types of digital media.",
+        "instruction_translated": "Намудҳои гуногуни васоити ахбори рақамиро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "List the differences between the Rich and the Poor.",
+        "instruction_translated": "Фарқиятҳои байни сарватмандон ва камбағалонро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the five step process of content creation?",
+        "instruction_translated": "Раванди панҷмарҳилаии эҷоди мундариҷа чист?",
+        "category": null
+    },
+    {
+        "instruction": "Describe the setting of a spooky old house.",
+        "instruction_translated": "Манзараи як хонаи кӯҳнаи даҳшатнокро тасвир кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a one-paragraph summary about Isaac Newton's mathematical discoveries.",
+        "instruction_translated": "Дар бораи кашфиётҳои математикии Исаак Нютон хулосаи як параграфӣ нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a pun using the phrase \"adulting\".",
+        "instruction_translated": "Бо истифода аз ибораи &quot;калонсолӣ&quot; калимаи бозӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a list of five questions about the ocean",
+        "instruction_translated": "Рӯйхати панҷ саволро дар бораи уқёнус тартиб диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Write a tweet about your favorite animal.",
+        "instruction_translated": "Дар бораи ҳайвони дӯстдоштаи худ твит нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain how a virtual assistant can help you with your daily tasks.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна ёвари виртуалӣ метавонад ба шумо дар иҷрои вазифаҳои ҳаррӯзаи шумо кумак кунад.",
+        "category": null
+    },
+    {
+        "instruction": "Explain how deep learning works.",
+        "instruction_translated": "Шарҳ диҳед, ки омӯзиши амиқ чӣ гуна кор мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a sentence that contains the word \"august\"",
+        "instruction_translated": "Ҷумлае созед, ки калимаи &quot;август&quot;-ро дар бар гирад",
+        "category": null
+    },
+    {
+        "instruction": "Generate a sentence containing both an adjective and an adverb",
+        "instruction_translated": "Ҷумлае созед, ки ҳам сифат ва ҳам зарфро дар бар гирад",
+        "category": null
+    },
+    {
+        "instruction": "How can businesses benefit from using AI?",
+        "instruction_translated": "Чӣ гуна тиҷорат метавонад аз истифодаи зеҳни сунъӣ фоида ба даст орад?",
+        "category": null
+    },
+    {
+        "instruction": "Explain how a modern computer system works",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна системаи компютерии муосир кор мекунад",
+        "category": null
+    },
+    {
+        "instruction": "Rewrite the following sentence using a metaphor:\nThe sunset was beautiful",
+        "instruction_translated": "Ҷумлаи зеринро бо истифода аз истиора аз нав нависед: Ғуруби офтоб зебо буд",
+        "category": null
+    },
+    {
+        "instruction": "Generate a web page about the history of slavery in America",
+        "instruction_translated": "Дар бораи таърихи ғуломдорӣ дар Амрико саҳифаи веб эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Create a bingo card with the words 'sleep', 'bath', 'movies', and 'read'.",
+        "instruction_translated": "Корти бинго бо калимаҳои &quot;хоб&quot;, &quot;ҳаммом&quot;, &quot;филмҳо&quot; ва &quot;хондан&quot; эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "List three reasons why the morning is the best time of the day.",
+        "instruction_translated": "Се сабабро номбар кунед, ки чаро субҳ вақти беҳтарини рӯз аст.",
+        "category": null
+    },
+    {
+        "instruction": "Create a tool to check your understanding after taking an online course.",
+        "instruction_translated": "Пас аз гузаштани курси онлайн, асбобе барои санҷиши фаҳмиши худ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a short story about a person who is able to use time machine.",
+        "instruction_translated": "Дар бораи шахсе, ки қодир аст аз мошини вақт истифода барад, ҳикояи кӯтоҳе эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a story about a cat that is stuck in a tree.",
+        "instruction_translated": "Дар бораи гурбае, ки дар дарахт часпидааст, ҳикояе нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Answer the question: why do we learn new languages?",
+        "instruction_translated": "Ба савол ҷавоб диҳед: чаро мо забонҳои навро меомӯзем?",
+        "category": null
+    },
+    {
+        "instruction": "Explain the difference between Machine Learning and Artificial Intelligence.",
+        "instruction_translated": "Фарқи байни омӯзиши мошинӣ ва зеҳни сунъиро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an analogy for black hole",
+        "instruction_translated": "Барои сӯрохи сиёҳ қиёс эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Write a paragraph summarizing one of the stories in the Bible.",
+        "instruction_translated": "Як параграф нависед, ки дар он яке аз ҳикояҳои Китоби Муқаддасро ҷамъбаст кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the different types of taxes and explain briefly what each tax is used for.",
+        "instruction_translated": "Намудҳои гуногуни андозҳоро муайян кунед ва мухтасар шарҳ диҳед, ки ҳар як андоз барои чӣ истифода мешавад.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a unique idea for a party invitation.",
+        "instruction_translated": "Барои даъватнома ба ҷашн идеяи беназире пайдо кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of 10 computer science terms which are useful in everyday conversation.",
+        "instruction_translated": "Рӯйхати 10 истилоҳи илми компютериро тартиб диҳед, ки дар сӯҳбати ҳаррӯза муфиданд.",
+        "category": null
+    },
+    {
+        "instruction": "Create a list of 5 verbs that could be used to describe playing a sport.",
+        "instruction_translated": "Рӯйхати 5 феълро тартиб диҳед, ки метавонанд барои тавсифи бозии варзишӣ истифода шаванд.",
+        "category": null
+    },
+    {
+        "instruction": "Write a speech to the graduating class about how their hard work will pay off.",
+        "instruction_translated": "Барои хатмкунандагон дар бораи он ки чӣ гуна заҳмати онҳо самараи хуб медиҳад, суханронӣ нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the concept of Newton's laws of motion.",
+        "instruction_translated": "Мафҳуми қонунҳои ҳаракати Нютонро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a 5-minute storytelling about a newspaper delivery person.",
+        "instruction_translated": "Дар бораи шахси расонидани рӯзнома ҳикояи 5-дақиқаӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an algorithm that identifies if an object is glass or metal.",
+        "instruction_translated": "Алгоритме эҷод кунед, ки муайян кунад, ки оё ашё шиша аст ё металл.",
+        "category": null
+    },
+    {
+        "instruction": "Add a conclusion to an essay about the importance of education",
+        "instruction_translated": "Ба эссе дар бораи аҳамияти маориф хулоса илова кунед",
+        "category": null
+    },
+    {
+        "instruction": "Convert 2 ounces to milliliters.",
+        "instruction_translated": "2 унсияро ба миллилитр табдил диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an NBA player trivia question.",
+        "instruction_translated": "Саволи викторинавӣ барои бозигарони NBA эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate an example of an idiom or proverb.",
+        "instruction_translated": "Мисоле аз мақол ё ибораи фразеологӣ биёред.",
+        "category": null
+    },
+    {
+        "instruction": "Explain the purpose of a company's quality assurance process.",
+        "instruction_translated": "Мақсади раванди кафолати сифатро дар ширкат шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare the characteristics between an AI chatbot and a virtual assistant.",
+        "instruction_translated": "Хусусиятҳои байни чатботи зеҳни сунъӣ ва ёвари виртуалиро муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a HTML page with a table that has five cells.",
+        "instruction_translated": "Саҳифаи HTML-ро бо ҷадвале созед, ки панҷ ячейка дорад.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a description of a book that takes place in a small rural town.",
+        "instruction_translated": "Тавсифи китоберо тартиб диҳед, ки дар як шаҳраки хурди деҳот рух медиҳад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the various components of an AI system.",
+        "instruction_translated": "Ҷузъҳои гуногуни системаи зеҳни сунъиро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Paraphrase this sentence: \"I will always remember the day I graduated.\"",
+        "instruction_translated": "Ин ҷумларо бо тарзи дигар баён кунед: «Ман ҳамеша рӯзеро, ки хатм кардаам, дар ёд хоҳам дошт».",
+        "category": null
+    },
+    {
+        "instruction": "Explain Islamic beliefs on fate.",
+        "instruction_translated": "Эътиқоди исломиро дар бораи тақдир шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify and explain 3 characteristics of a dactyl.",
+        "instruction_translated": "Се хусусияти дактилро муайян ва шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Suggest a new podcast episode topic",
+        "instruction_translated": "Мавзӯи нави эпизоди подкастро пешниҳод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Rewrite this sentence in a more concise way: \"Cloud computing is an emerging technology which allows businesses to store and manage data and applications on servers hosted on the internet.\"",
+        "instruction_translated": "Ин ҷумларо бо тарзи мухтасартар аз нав нависед: &quot;Ҳисоббарории абрӣ як технологияи навбунёд аст, ки ба тиҷорат имкон медиҳад маълумот ва барномаҳоро дар серверҳои дар интернет ҷойгиршуда нигоҳдорӣ ва идора кунад.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Explain why biofuels may be an important part of the renewable energy future.",
+        "instruction_translated": "Шарҳ диҳед, ки чаро сӯзишвории биологӣ метавонад қисми муҳими ояндаи энергияи барқароршаванда бошад.",
+        "category": null
+    },
+    {
+        "instruction": "What are the key elements to creating a successful presentation?",
+        "instruction_translated": "Унсурҳои асосии таҳияи презентатсияи муваффақ кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Design an experiment to determine if smoking affects memory.",
+        "instruction_translated": "Таҷрибаеро тарҳрезӣ кунед, то муайян кунед, ки оё тамокукашӣ ба хотира таъсир мерасонад.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me the history of the internet.",
+        "instruction_translated": "Таърихи пайдоиши интернетро ба ман нақл кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a description of a large, carnivorous dinosaur.",
+        "instruction_translated": "Тавсифи динозаври калон ва даррандаро тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "List some traditional Japanese dishes",
+        "instruction_translated": "Баъзе аз хӯрокҳои анъанавии ҷопонӣ номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Evaluate this statement: \"Genetically modified (GM) organisms are positive for the environment\".",
+        "instruction_translated": "Ин изҳоротро арзёбӣ кунед: &quot;Организмҳои аз ҷиҳати генетикӣ тағйирёфта (GM) барои муҳити зист мусбатанд&quot;.",
+        "category": null
+    },
+    {
+        "instruction": "Elaborate on the difference between unsupervised and supervised learning.",
+        "instruction_translated": "Фарқи байни омӯзиши беназорат ва беназоратро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Calculate the mean of the numbers 2,3,7,1",
+        "instruction_translated": "Миёна рақамҳои 2, 3, 7, 1-ро ҳисоб кунед",
+        "category": null
+    },
+    {
+        "instruction": "Name four states in the USA that border the Pacific Ocean.",
+        "instruction_translated": "Номи чор иёлати ИМА-ро, ки бо уқёнуси Ором ҳамсарҳад мебошанд, номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare the effect of different techniques for preventing data loss from cyber attacks.",
+        "instruction_translated": "Таъсири усулҳои гуногунро барои пешгирии талафи маълумот аз ҳамлаҳои киберӣ муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the sounds of a sunny summer day.",
+        "instruction_translated": "Садоҳои як рӯзи офтобии тобистонро тасвир кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Make up a bedtime story for a three year old.",
+        "instruction_translated": "Барои кӯдаки сесола ҳикояи пеш аз хоб эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Complete the following sentence: \"You can't judge a book by _____.\"",
+        "instruction_translated": "Ҷумлаи зеринро пурра кунед: &quot;Шумо наметавонед китобро аз рӯи _____ доварӣ кунед.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Summarize the role of data scientists in a few sentences.",
+        "instruction_translated": "Нақши олимони маълумотро дар чанд ҷумла ҷамъбаст кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a query for retrieving the top 10 books in the “Mystery” genre from an online bookstore database.",
+        "instruction_translated": "Барои гирифтани 10 китоби беҳтарин дар жанри &quot;Асрор&quot; аз пойгоҳи додаҳои китобфурӯшии онлайн дархост тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain why it is important to have meaningful conversations with your colleagues.",
+        "instruction_translated": "Шарҳ диҳед, ки чаро сӯҳбатҳои пурмазмун бо ҳамкоронатон муҳиманд.",
+        "category": null
+    },
+    {
+        "instruction": "Explain what climate change is",
+        "instruction_translated": "Шарҳ диҳед, ки тағйирёбии иқлим чист",
+        "category": null
+    },
+    {
+        "instruction": "I need to organize a picnic for a large group of people. How can I do that?",
+        "instruction_translated": "Ман бояд барои як гурӯҳи калони одамон пикник ташкил кунам. Чӣ тавр ман метавонам ин корро кунам?",
+        "category": null
+    },
+    {
+        "instruction": "How do you make a Peanut Butter and Jelly Sandwich",
+        "instruction_translated": "Чӣ тавр сандвичи равғани арахис ва желе тайёр кардан мумкин аст",
+        "category": null
+    },
+    {
+        "instruction": "Think of a portmanteau word combining the words “pig” and “dog”",
+        "instruction_translated": "Калимаи портмантоеро фикр кунед, ки калимаҳои &quot;хук&quot; ва &quot;саг&quot;-ро муттаҳид мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Find and describe the current social trend in Gen Z.",
+        "instruction_translated": "Тамоюли иҷтимоии кунуниро дар насли Z пайдо ва тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "You are requested to generate a list of projects that you can implement over the next 3 months.",
+        "instruction_translated": "Аз шумо хоҳиш карда мешавад, ки рӯйхати лоиҳаҳоеро тартиб диҳед, ки шумо метавонед дар тӯли 3 моҳи оянда амалӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Arrange the words \"rabbit\", \"sleep\", and \"shelf\" into a sentence.",
+        "instruction_translated": "Калимаҳои &quot;харгӯш&quot;, &quot;хоб&quot; ва &quot;раф&quot;-ро дар ҷумла ҷойгир кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Provide three examples of plants that are native to the United States.",
+        "instruction_translated": "Се мисоли растаниҳоеро пешниҳод кунед, ки дар Иёлоти Муттаҳида мерӯянд.",
+        "category": null
+    },
+    {
+        "instruction": "Write the comparative form of 'good'.",
+        "instruction_translated": "Шакли муқоисавии калимаи «хуб»-ро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me about the difference between a civil and a criminal lawsuit",
+        "instruction_translated": "Дар бораи фарқи байни даъвои гражданӣ ва ҷиноӣ ба ман маълумот диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Create a list of five potential questions that someone could ask the assistant.",
+        "instruction_translated": "Рӯйхати панҷ саволи эҳтимолиро тартиб диҳед, ки шахс метавонад аз ёвар пурсад.",
+        "category": null
+    },
+    {
+        "instruction": "Create a table that compares and contrasts two countries of your choice",
+        "instruction_translated": "Ҷадвале эҷод кунед, ки ду кишвари интихобкардаи шуморо муқоиса ва муқобила кунад",
+        "category": null
+    },
+    {
+        "instruction": "Compile a list of 5 common misconceptions about the health effects of smoking.",
+        "instruction_translated": "Рӯйхати 5 тасаввуроти нодурусти маъмулро дар бораи таъсири тамокукашӣ ба саломатӣ тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "You need to write a persuasive article discussing the importance of coding education in schools.",
+        "instruction_translated": "Шумо бояд мақолаи боварибахше нависед, ки дар он аҳамияти таълими рамзгузорӣ дар мактабҳо баррасӣ мешавад.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a headline for a news article about President Trump's policies on global warming.",
+        "instruction_translated": "Барои мақолаи хабарӣ дар бораи сиёсати президент Трамп дар бораи гармшавии глобалӣ сарлавҳа эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a set of criteria for code readability",
+        "instruction_translated": "Як қатор меъёрҳоро барои хондани код таҳия кунед",
+        "category": null
+    },
+    {
+        "instruction": "List 3 benefits for eating a balanced diet.",
+        "instruction_translated": "3 фоидаи парҳези мутавозинро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the process for starting a business.",
+        "instruction_translated": "Раванди оғози тиҷоратро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the energy cycle of the sun.",
+        "instruction_translated": "Давраи энергияи офтобро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Design an experiment that tests the reaction of a tomato's growth to different kinds of water.",
+        "instruction_translated": "Таҷрибаеро тарҳрезӣ кунед, ки аксуламали сабзиши помидорро ба намудҳои гуногуни об месанҷад.",
+        "category": null
+    },
+    {
+        "instruction": "Give a brief description of the historical period known as the French Revolution.",
+        "instruction_translated": "Тавсифи мухтасари давраи таърихии маъруф бо номи Инқилоби Фаронсаро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What are the benefits of using a task-oriented chatbot?",
+        "instruction_translated": "Истифодаи чатботи ба вазифа нигаронидашуда чӣ манфиатҳо дорад?",
+        "category": null
+    },
+    {
+        "instruction": "Create three strategies for improving customer service in a retail store.",
+        "instruction_translated": "Се стратегияро барои беҳтар кардани хизматрасонӣ ба мизоҷон дар мағозаи чакана таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "How can schools improve student safety during the covid-19 pandemic?",
+        "instruction_translated": "Чӣ гуна мактабҳо метавонанд бехатарии хонандагонро дар давраи пандемияи COVID-19 беҳтар кунанд?",
+        "category": null
+    },
+    {
+        "instruction": "What is the difference between hard and soft skills?",
+        "instruction_translated": "Фарқи байни малакаҳои сахт ва нарм чист?",
+        "category": null
+    },
+    {
+        "instruction": "How has the coronavirus pandemic impacted the economy in the United States?",
+        "instruction_translated": "Пандемияи коронавирус ба иқтисодиёти Иёлоти Муттаҳида чӣ гуна таъсир расонд?",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast print media and digital media.",
+        "instruction_translated": "Воситаҳои ахбори чопӣ ва рақамиро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the momentum concept of Physics in one sentence.",
+        "instruction_translated": "Мафҳуми импулси физикаро бо як ҷумла шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Given the news headline, \"New Chinese Economy Boom,\" write the opening of the article.",
+        "instruction_translated": "Бо назардошти сарлавҳаи хабарӣ, &quot;Рушди нави иқтисоди Чин&quot;, оғози мақоларо нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Design a data visualization to show the evolution of the stock market over time.",
+        "instruction_translated": "Барои нишон додани таҳаввулоти бозори саҳомӣ дар тӯли замон, як визуализатсияи маълумотро тарҳрезӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a metaphor that captures the feeling of joy.",
+        "instruction_translated": "Як истиорае созед, ки эҳсоси шодмониро инъикос мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Using the noun \"boat\" write a simile",
+        "instruction_translated": "Бо истифода аз исми &quot;қаиқ&quot; як қиёс нависед",
+        "category": null
+    },
+    {
+        "instruction": "Paraphrase the phrase \"She was very happy\".",
+        "instruction_translated": "Ибораи &quot;Вай хеле хушбахт буд&quot;-ро бо ибораи дигар нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Spell the world \"pneumonia\"",
+        "instruction_translated": "Ҷаҳонро &quot;пневмония&quot; нависед",
+        "category": null
+    },
+    {
+        "instruction": "Create a function to determine whether a number is prime or not.",
+        "instruction_translated": "Функсияеро эҷод кунед, ки муайян кунад, ки адад аслӣ аст ё не.",
+        "category": null
+    },
+    {
+        "instruction": "Find the Wikipedia link for the historic battle of Chancellorsville.",
+        "instruction_translated": "Пайванди Википедияро барои ҷанги таърихии Чанселлорсвилл пайдо кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Classify a 3D printer as a consumer or industrial product.",
+        "instruction_translated": "Принтери 3D-ро ҳамчун маҳсулоти истеъмолӣ ё саноатӣ тасниф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name a language spoken in Africa.",
+        "instruction_translated": "Номи забонеро, ки дар Африқо гап мезананд, бигӯед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of reasons why going for a walk can be good for one's mental well-being.",
+        "instruction_translated": "Рӯйхати сабабҳоеро тартиб диҳед, ки чаро сайругашт метавонад барои некӯаҳволии равонии шахс хуб бошад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the experience of using a Virtual Reality headset.",
+        "instruction_translated": "Таҷрибаи истифодаи гӯшмонаки воқеияти виртуалиро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the ideal workspace",
+        "instruction_translated": "Фазои кории идеалиро тавсиф кунед",
+        "category": null
+    },
+    {
+        "instruction": "Suggest a unique and creative marketing strategy.",
+        "instruction_translated": "Як стратегияи беназир ва эҷодии маркетингро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast two popular tourist attractions in your hometown.",
+        "instruction_translated": "Ду макони сайёҳии машҳури шаҳри худро муқоиса ва муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Outline the main points of a speech about the effects of climate change",
+        "instruction_translated": "Нуктаҳои асосии суханрониро дар бораи таъсири тағйирёбии иқлим шарҳ диҳед",
+        "category": null
+    },
+    {
+        "instruction": "Brainstorm ideas on how to create a sustainable business model.",
+        "instruction_translated": "Андешаҳои ақлонӣ оид ба чӣ гуна эҷод кардани модели тиҷоратии устувор.",
+        "category": null
+    },
+    {
+        "instruction": "Edit the following sentence: He attending the party.",
+        "instruction_translated": "Ҷумлаи зеринро таҳрир кунед: Ӯ ба зиёфат ташриф меорад.",
+        "category": null
+    },
+    {
+        "instruction": "How can machines be used to reduce carbon emissions?",
+        "instruction_translated": "Чӣ гуна мошинҳоро барои кам кардани партовҳои карбон истифода бурдан мумкин аст?",
+        "category": null
+    },
+    {
+        "instruction": "Name 5 TV series set in London",
+        "instruction_translated": "Номи 5 сериали телевизионӣ, ки дар Лондон ба нақша гирифта шудаанд",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast one of the top 5 drinking games.",
+        "instruction_translated": "Яке аз 5 бозии беҳтарини нӯшокиро муқоиса ва муқоиса кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Identify a way to reduce pollution in large cities.",
+        "instruction_translated": "Роҳҳои коҳиш додани ифлосшавии ҳаворо дар шаҳрҳои калон муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Pretend you are advising a friend who is going through a difficult situation. Create a positive message to give them.",
+        "instruction_translated": "Тасаввур кунед, ки шумо ба дӯсте, ки аз вазъияти душвор гузаштааст, маслиҳат медиҳед. Барои расонидани онҳо паёми мусбат эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Find the average of the numbers 3, 5, 9, and 11.",
+        "instruction_translated": "Миёнатарини ададҳои 3, 5, 9 ва 11-ро ёбед.",
+        "category": null
+    },
+    {
+        "instruction": "How can I learn more efficiently?",
+        "instruction_translated": "Чӣ тавр ман метавонам самараноктар омӯзам?",
+        "category": null
+    },
+    {
+        "instruction": "Name a food rich in iron.",
+        "instruction_translated": "Хӯроки аз оҳан бойро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the taste of an apple.",
+        "instruction_translated": "Таъми себро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe a character trait of Odysseus from the Odyssey.",
+        "instruction_translated": "Яке аз хусусиятҳои Одиссейро аз достони &quot;Одиссея&quot; тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Construct a SQL query to select the names of customers whose orders were delivered after April 13, 2021",
+        "instruction_translated": "Барои интихоби номҳои муштариёне, ки фармоишҳояшон пас аз 13 апрели соли 2021 расонида шудаанд, дархости SQL созед",
+        "category": null
+    },
+    {
+        "instruction": "Make a list of 5 budget-friendly ways to improve one's home.",
+        "instruction_translated": "Рӯйхати 5 роҳи мувофиқ барои беҳтар кардани хонаи худро тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Using a metaphor, describe the current economic climate in the US.",
+        "instruction_translated": "Бо истифода аз истиора, вазъи кунунии иқтисодии ИМА-ро тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Design a strategy for developing artificial intelligence.",
+        "instruction_translated": "Таҳияи стратегия барои рушди зеҳни сунъӣ.",
+        "category": null
+    },
+    {
+        "instruction": "Explain what a simile is and give an example of one.",
+        "instruction_translated": "Шарҳ диҳед, ки муқоиса чист ва мисоле аз он биёред.",
+        "category": null
+    },
+    {
+        "instruction": "Tell us about the benefits of using encryption.",
+        "instruction_translated": "Дар бораи бартариҳои истифодаи рамзгузорӣ ба мо нақл кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the most important step in the machine learning process?",
+        "instruction_translated": "Қадами муҳимтарин дар раванди омӯзиши мошинӣ кадом аст?",
+        "category": null
+    },
+    {
+        "instruction": "Write a definition for the concept of photoynthesis.",
+        "instruction_translated": "Таърифи мафҳуми фотосинтезро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an argument for the use of renewable energy sources.",
+        "instruction_translated": "Барои истифодаи манбаъҳои барқароршавандаи энергия далелҳо пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Determine if the following equation is valid: 2X+Y=100",
+        "instruction_translated": "Муайян кунед, ки оё муодилаи зерин дуруст аст: 2X+Y=100",
+        "category": null
+    },
+    {
+        "instruction": "Suggest some strategies to help athletes set appropriate goals.",
+        "instruction_translated": "Барои кӯмак ба варзишгарон дар муқаррар кардани ҳадафҳои мувофиқ баъзе стратегияҳоро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "A friend of yours is considering taking a gap year before college. Write a short paragraph in which you encourage them to take the gap year.",
+        "instruction_translated": "Яке аз дӯстатон пеш аз хатми донишгоҳ дар бораи гирифтани як соли танаффус фикр мекунад. Як параграфи кӯтоҳе нависед, ки дар он онҳоро барои гирифтани як соли танаффус ташвиқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a nursery rhyme about learning.",
+        "instruction_translated": "Дар бораи омӯзиш шеъри кӯдакона эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Back transliterate the word “yoga” from Sanskrit to English.",
+        "instruction_translated": "Калимаи &quot;йога&quot;-ро аз санскрит ба англисӣ баргардонед.",
+        "category": null
+    },
+    {
+        "instruction": "Formulate a hypothesis for why the language “English” has the highest share of webpages.",
+        "instruction_translated": "Фарзияеро таҳия кунед, ки чаро забони &quot;англисӣ&quot; саҳми бештари саҳифаҳои вебро дорад.",
+        "category": null
+    },
+    {
+        "instruction": "How would you describe the color orange to a blind person?",
+        "instruction_translated": "Шумо ранги норинҷиро барои шахси нобино чӣ гуна тавсиф медиҳед?",
+        "category": null
+    },
+    {
+        "instruction": "Compose a 5-sentence-long story about a girl who received a traditional gift.",
+        "instruction_translated": "Дар бораи духтаре, ки тӯҳфаи анъанавӣ гирифтааст, ҳикояи 5 ҷумлаӣ нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain why using a calculator is preferred to long division",
+        "instruction_translated": "Шарҳ диҳед, ки чаро истифодаи калкулятор нисбат ба тақсимоти тӯлонӣ афзалтар аст",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of five questions to ask a friend who just moved to a new city.",
+        "instruction_translated": "Рӯйхати панҷ саволро тартиб диҳед, ки аз дӯсте, ки нав ба шаҳри нав кӯчидааст, пурсед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast the differences between a coral reef and a tropical rainforest.",
+        "instruction_translated": "Фарқиятҳои байни рифи марҷонӣ ва ҷангали борони тропикиро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write an article for a magazine about how the average person can reduce their environmental impact.",
+        "instruction_translated": "Дар бораи он ки чӣ гуна як шахси оддӣ метавонад таъсири худро ба муҳити зист кам кунад, мақолае барои маҷалла нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Lying is often viewed negatively; come up with one scenario where lying is acceptable.",
+        "instruction_translated": "Дурӯғ гуфтан аксар вақт манфӣ ба назар мерасад; як сенарияеро пешниҳод кунед, ки дар он дурӯғ қобили қабул аст.",
+        "category": null
+    },
+    {
+        "instruction": "Identify the main idea of the following article:\nhttps://en.wikipedia.org/wiki/Agriculture",
+        "instruction_translated": "Идеяи асосии мақолаи зеринро муайян кунед: https://en.wikipedia.org/wiki/Agriculture",
+        "category": null
+    },
+    {
+        "instruction": "Construct a sentence using the words “flit”, “obscure”, and “abandoned”",
+        "instruction_translated": "Бо истифода аз калимаҳои &quot;партофташуда&quot;, &quot;норавшан&quot; ва &quot;партофташуда&quot; ҷумла тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Brainstorm a list of 5 least expensive winter activities that can be done outdoors.",
+        "instruction_translated": "Рӯйхати 5 фаъолияти арзонтарини зимистонаро, ки метавонанд дар берун анҷом дода шаванд, тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a narrative about a brave lion.",
+        "instruction_translated": "Дар бораи шери далер қиссае нависед.",
+        "category": null
+    },
+    {
+        "instruction": "List five benefits of using an AI assistant.",
+        "instruction_translated": "Панҷ бартарии истифодаи ёвари зеҳни сунъиро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name five medicinal plants widely used in Ayurveda.",
+        "instruction_translated": "Панҷ гиёҳи шифобахшро номбар кунед, ки дар Аюрведа васеъ истифода мешаванд.",
+        "category": null
+    },
+    {
+        "instruction": "How would you explain how the stock market works to a 5 year old?",
+        "instruction_translated": "Шумо чӣ гуна кори бозори саҳҳомиро ба кӯдаки 5-сола мефаҳмонед?",
+        "category": null
+    },
+    {
+        "instruction": "Write a creative story that involves a talking tree.",
+        "instruction_translated": "Ҳикояи эҷодие нависед, ки дарахти сухангӯро дар бар мегирад.",
+        "category": null
+    },
+    {
+        "instruction": "What questions could you ask to classify an item as clothing?",
+        "instruction_translated": "Шумо барои тасниф кардани ашё ҳамчун либос кадом саволҳоро дода метавонед?",
+        "category": null
+    },
+    {
+        "instruction": "Give an example of a city in Europe that knows for its vibrant night life.",
+        "instruction_translated": "Мисоле аз шаҳре дар Аврупо биёред, ки бо ҳаёти шабонаи пурҷӯшу хурӯшаш машҳур аст.",
+        "category": null
+    },
+    {
+        "instruction": "Identify a weakness of using text-based dialogue with a conversational AI.",
+        "instruction_translated": "Нуқсони истифодаи муколамаи матнӣ бо зеҳни сунъии гуфтугӯиро муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast fresh-cooked food with packaged food",
+        "instruction_translated": "Хӯрокҳои тару тоза пухташударо бо хӯрокҳои бастабандишуда муқоиса ва муқоиса кунед",
+        "category": null
+    },
+    {
+        "instruction": "Find the population of Nashville, TN",
+        "instruction_translated": "Аҳолии Нэшвилл, Теннессиро ёбед",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of topics to discuss in a meeting about business plans for the upcoming year.",
+        "instruction_translated": "Рӯйхати мавзӯъҳоеро барои муҳокима дар ҷаласа дар бораи нақшаҳои тиҷоратӣ барои соли оянда тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a unique nickname for the name \"John\".",
+        "instruction_translated": "Барои номи &quot;Ҷон&quot; лақаби беназир эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a generic URL for a website about cats",
+        "instruction_translated": "URL-и умумӣ барои вебсайт дар бораи гурбаҳо эҷод кунед",
+        "category": null
+    },
+    {
+        "instruction": "Design a logo with 3 symbols for a fictional cosmetics company.",
+        "instruction_translated": "Логотиперо бо 3 рамз барои як ширкати косметикаи хаёлӣ тарроҳӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Make a valid sentence using the words \"quick,\" \"brown,\" and \"fox.\"",
+        "instruction_translated": "Бо истифода аз калимаҳои &quot;зуд&quot;, &quot;қаҳваранг&quot; ва &quot;рӯбоҳ&quot; ҷумлаи дуруст тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "What is the force on a 1 kg mass due to the gravitational force?",
+        "instruction_translated": "Қувваи ҷозиба ба ҷисми 1 кг чӣ қадар таъсир мекунад?",
+        "category": null
+    },
+    {
+        "instruction": "Create a thesis statement that must explain why Trump benefits from the US-China trade war.",
+        "instruction_translated": "Изҳороти тезисӣ таҳия кунед, ки бояд шарҳ диҳад, ки чаро Трамп аз ҷанги тиҷоратии ИМА ва Чин манфиат мегирад.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of topics for a presentation about mental health.",
+        "instruction_translated": "Рӯйхати мавзӯъҳоро барои презентатсия дар бораи солимии равонӣ тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Create an algorithm that can determine the palindromes in a given string",
+        "instruction_translated": "Алгоритме эҷод кунед, ки палиндромҳоро дар сатри додашуда муайян карда тавонад",
+        "category": null
+    },
+    {
+        "instruction": "I want to buy a smartphone. What are the main features I should look for?",
+        "instruction_translated": "Ман мехоҳам смартфон харам. Хусусиятҳои асосии он кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Compose a text in the style of Dr. Seuss.",
+        "instruction_translated": "Матнро бо услуби доктор Сьюсс нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Re-frame the following sentence: \"I can't bear the heat.\"",
+        "instruction_translated": "Ҷумлаи зеринро аз нав тартиб диҳед: «Ман гармиро таҳаммул карда наметавонам».",
+        "category": null
+    },
+    {
+        "instruction": "Create a PowerPoint presentation about the French Revolution.",
+        "instruction_translated": "Дар бораи Инқилоби Фаронса презентатсияи PowerPoint эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the behavior of a specific star in the night sky in 10 words.",
+        "instruction_translated": "Рафтори ситораи мушаххасро дар осмони шабона бо 10 калима тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Predicte the stock price of Google in five years.",
+        "instruction_translated": "Нархи саҳмияҳои Google-ро дар панҷ сол пешгӯӣ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Tell the name of a famous mathematician.",
+        "instruction_translated": "Номи як математики машҳурро бигӯед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe in two sentences the relationship between biofuels and climate change",
+        "instruction_translated": "Робитаи байни сӯзишвории биологӣ ва тағирёбии иқлимро дар ду ҷумла тавсиф кунед",
+        "category": null
+    },
+    {
+        "instruction": "Convert 3/4 ft to inches.",
+        "instruction_translated": "3/4 футро ба дюйм табдил диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "How does the use of AI influence the way businesses operate? Output less than 100 words.",
+        "instruction_translated": "Истифодаи зеҳни сунъӣ ба тарзи фаъолияти тиҷорат чӣ гуна таъсир мерасонад? Камтар аз 100 калимаро чоп кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Write a summary of the story \"The Three Little Pigs\".",
+        "instruction_translated": "Хулосаи ҳикояи &quot;Се хуки хурдсол&quot;-ро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a logic puzzle that can be solved by logic deduction.",
+        "instruction_translated": "Як муаммои мантиқӣ эҷод кунед, ки онро бо истифода аз дедуксияи мантиқӣ ҳал кардан мумкин аст.",
+        "category": null
+    },
+    {
+        "instruction": "Why are first aid kits important?",
+        "instruction_translated": "Чаро маҷмӯаҳои ёрии аввалия муҳиманд?",
+        "category": null
+    },
+    {
+        "instruction": "Generate an email subject line that encourages the recipient to open the email.",
+        "instruction_translated": "Сатри мавзӯъи почтаи электрониро эҷод кунед, ки гирандаро барои кушодани почтаи электронӣ ташвиқ мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the impact of nanotechnology on medical treatments.",
+        "instruction_translated": "Таъсири нанотехнологияро ба усулҳои табобат шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Compose an email to your boss informing him that you are taking a sick leave today.",
+        "instruction_translated": "Ба сардоратон паёми электронӣ нависед, ки дар он ба ӯ хабар диҳед, ки имрӯз ба рухсатии беморӣ меравед.",
+        "category": null
+    },
+    {
+        "instruction": "Explain how carbon dioxide contributes to global warming.",
+        "instruction_translated": "Шарҳ диҳед, ки чӣ гуна гази карбон ба гармшавии глобалӣ мусоидат мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me about the latest news.",
+        "instruction_translated": "Дар бораи хабарҳои охирин ба ман нақл кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Evaluate why the “Law of Accelerating Returns” is an important concept in the field of technological change.",
+        "instruction_translated": "Арзёбӣ кунед, ки чаро «Қонуни суръатбахшии бозгашт» як мафҳуми муҳим дар соҳаи тағйироти технологӣ мебошад.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me the first celebrity to win the Nobel Peace Prize.",
+        "instruction_translated": "Аввалин шахсияти машҳуреро, ки ҷоизаи сулҳи Нобелро ба даст овард, ба ман бигӯед?",
+        "category": null
+    },
+    {
+        "instruction": "Suggest an eco-friendly way to travel",
+        "instruction_translated": "Роҳи сафари экологӣ пешниҳод кунед",
+        "category": null
+    },
+    {
+        "instruction": "List ten scientific names of animals.",
+        "instruction_translated": "Даҳ номи илмии ҳайвонотро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a creative writing piece about a character's summer days.",
+        "instruction_translated": "Дар бораи рӯзҳои тобистонаи қаҳрамон як асари эҷодӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Design a poster encouraging people to use public transport instead of cars.",
+        "instruction_translated": "Плакате тарроҳӣ кунед, ки одамонро ба истифодаи нақлиёти ҷамъиятӣ ба ҷои мошин ташвиқ кунад.",
+        "category": null
+    },
+    {
+        "instruction": "List ways to improve the user experience when buying online.",
+        "instruction_translated": "Роҳҳои беҳтар кардани таҷрибаи корбар ҳангоми хариди онлайнро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Determine the comparative form of the word \"happy\"",
+        "instruction_translated": "Шакли муқоисавии калимаи &quot;хушбахт&quot;-ро муайян кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Name at least two benefits of studying computer science.",
+        "instruction_translated": "Ҳадди ақал ду фоидаи омӯзиши илми компютерро номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a random password that meets the criteria of having upper case, lower case, and a number.",
+        "instruction_translated": "Пароли тасодуфие эҷод кунед, ки ба меъёрҳои доштани ҳарфҳои калон, ҳарфҳои хурд ва рақам ҷавобгӯ бошад.",
+        "category": null
+    },
+    {
+        "instruction": "What is the period of the sun's orbit around the Milky Way?",
+        "instruction_translated": "Давраи гардиши Офтоб дар атрофи Роҳи Каҳкашон чанд аст?",
+        "category": null
+    },
+    {
+        "instruction": "Write the method for finding the area of a circle.",
+        "instruction_translated": "Усули ёфтани масоҳати доираро нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a joke that is related to physics.\nOutput the joke.",
+        "instruction_translated": "Латифае эҷод кунед, ки ба физика алоқаманд бошад. Латифаро бароред.",
+        "category": null
+    },
+    {
+        "instruction": "Create a cascading stylesheet for a website.",
+        "instruction_translated": "Барои вебсайт варақаи услубии каскадӣ эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a step-by-step procedure for making a cup of tea.",
+        "instruction_translated": "Тартиби қадам ба қадам барои тайёр кардани як пиёла чойро таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe what data science is.",
+        "instruction_translated": "Шарҳ диҳед, ки илми додаҳо чист.",
+        "category": null
+    },
+    {
+        "instruction": "Why is Python a good language for data science?",
+        "instruction_translated": "Чаро Python забони хубе барои илми додаҳо аст?",
+        "category": null
+    },
+    {
+        "instruction": "Construct an analogy for the following sentence: \"A computer is to code what a chef is to food.\"",
+        "instruction_translated": "Барои ҷумлаи зерин қиёс созед: &quot;Компютер ин рамзгузорӣ кардани он чизест, ки ошпаз барои хӯрок аст.&quot;",
+        "category": null
+    },
+    {
+        "instruction": "Describe the biome of a tropical rainforest in a few sentences.",
+        "instruction_translated": "Биоми ҷангали тропикиро дар чанд ҷумла тавсиф кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a question that could be asked by a customer.",
+        "instruction_translated": "Саволе эҷод кунед, ки метавонад аз ҷониби муштарӣ дода шавад.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a story about a person going on a last-minute vacation.",
+        "instruction_translated": "Дар бораи шахсе, ки дар лаҳзаи охир ба рухсатӣ меравад, ҳикоя эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of UX best practices.",
+        "instruction_translated": "Рӯйхати беҳтарин таҷрибаҳои UX-ро тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Find out the major differences between Java and JavaScript",
+        "instruction_translated": "Фарқиятҳои асосии байни Java ва JavaScript-ро фаҳмед",
+        "category": null
+    },
+    {
+        "instruction": "Name three ways a person could reduce their carbon footprint",
+        "instruction_translated": "Се роҳеро номбар кунед, ки шахс метавонад изи карбонии худро кам кунад",
+        "category": null
+    },
+    {
+        "instruction": "Describe the negative impacts of using plastic bags.",
+        "instruction_translated": "Таъсири манфии истифодаи халтаҳои пластикиро шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "List the steps involved in creating a website.",
+        "instruction_translated": "Қадамҳои заруриро барои эҷоди вебсайт номбар кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Design the interior of a high-end restaurant.",
+        "instruction_translated": "Тарроҳии дохилии як тарабхонаи сатҳи баланд.",
+        "category": null
+    },
+    {
+        "instruction": "What is the difference between articulatory and acoustic phonetics?",
+        "instruction_translated": "Фарқи байни фонетикаи артикулятсионӣ ва акустикӣ чист?",
+        "category": null
+    },
+    {
+        "instruction": "Generate a numerical expression that adds 2 and 5 and multiplies by 4.",
+        "instruction_translated": "Ибораи рақамие созед, ки адади 2 ва 5-ро ҷамъ карда, адади 4-ро зарб мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Tell me something about a Nissan leaf.",
+        "instruction_translated": "Дар бораи Nissan Leaf чизе нақл кунед.",
+        "category": null
+    },
+    {
+        "instruction": "What are the five different tastes humans can detect?",
+        "instruction_translated": "Инсонҳо кадом панҷ таъми гуногунро эҳсос карда метавонанд?",
+        "category": null
+    },
+    {
+        "instruction": "Generate a creative slogan that describes the benefits of using an AI assistant.",
+        "instruction_translated": "Шиори эҷодӣ эҷод кунед, ки бартариҳои истифодаи ёвари зеҳни сунъиро тавсиф мекунад.",
+        "category": null
+    },
+    {
+        "instruction": "Describe an interesting fact about giraffes",
+        "instruction_translated": "Як далели ҷолибро дар бораи жирафҳо нақл кунед",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast two types of computer networks.",
+        "instruction_translated": "Ду намуди шабакаҳои компютериро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Create a synopsis of the film Die Hard.",
+        "instruction_translated": "Хулосаи филми &quot;Die Hard&quot;-ро тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Edit the following sentence for clarity: \"I would like to go out to part with my friends\"",
+        "instruction_translated": "Барои равшанӣ ҷумлаи зеринро таҳрир кунед: &quot;Ман мехоҳам барои ҷудо шудан бо дӯстонам берун равам&quot;.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a list of 5 development strategies for small business owners.",
+        "instruction_translated": "Рӯйхати 5 стратегияи рушдро барои соҳибони тиҷорати хурд тартиб диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Brainstorm some innovative ideas for using virtual reality in marketing.",
+        "instruction_translated": "Барои истифодаи воқеияти виртуалӣ дар маркетинг баъзе ғояҳои инноватсионӣ таҳия кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Determine what international organizations have authority over the internet.",
+        "instruction_translated": "Муайян кунед, ки кадом созмонҳои байналмилалӣ дар интернет салоҳият доранд.",
+        "category": null
+    },
+    {
+        "instruction": "Explain why it is important to think before you speak.",
+        "instruction_translated": "Фаҳмонед, ки чаро пеш аз сухан гуфтан фикр кардан муҳим аст.",
+        "category": null
+    },
+    {
+        "instruction": "Generate a tweet that explains the importance of self-care.",
+        "instruction_translated": "Твитеро эҷод кунед, ки аҳамияти нигоҳубини худиро шарҳ медиҳад.",
+        "category": null
+    },
+    {
+        "instruction": "List three potential online security risks",
+        "instruction_translated": "Се хатари эҳтимолии амнияти онлайнро номбар кунед",
+        "category": null
+    },
+    {
+        "instruction": "Explain what is meant by a recursive function.",
+        "instruction_translated": "Шарҳ диҳед, ки зери мафҳуми функсияи рекурсивӣ чӣ маъно дорад.",
+        "category": null
+    },
+    {
+        "instruction": "Provide a definition of the term \"self-care\".",
+        "instruction_translated": "Таърифи истилоҳи &quot;худпарастӣ&quot;-ро пешниҳод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the effects of smoking on the respiratory system.",
+        "instruction_translated": "Таъсири тамокукаширо ба системаи нафаскашӣ шарҳ диҳед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe how to clean a windowsill",
+        "instruction_translated": "Тавсиф кунед, ки чӣ тавр тирезаро тоза кунед",
+        "category": null
+    },
+    {
+        "instruction": "Write a short story about a girl searching for a magical creature.",
+        "instruction_translated": "Дар бораи духтаре, ки махлуқи ҷодугарро меҷӯяд, ҳикояи кӯтоҳе нависед.",
+        "category": null
+    },
+    {
+        "instruction": "Come up with a title for a sci-fi book.",
+        "instruction_translated": "Барои китоби илмӣ-фантастикӣ унвон эҷод кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Find simple noun forms of the following verbs: look, talk, tell",
+        "instruction_translated": "Шаклҳои оддии исмии феълҳои зеринро ёбед: нигоҳ кардан, гап задан, нақл кардан",
+        "category": null
+    },
+    {
+        "instruction": "What are the pros and cons of using a database management system?",
+        "instruction_translated": "Афзалиятҳо ва нуқсонҳои истифодаи системаи идоракунии пойгоҳи додаҳо кадомҳоянд?",
+        "category": null
+    },
+    {
+        "instruction": "Create a data set containing the population of 5 countries.",
+        "instruction_translated": "Маҷмӯи маълумотеро эҷод кунед, ки аҳолии 5 кишварро дар бар мегирад.",
+        "category": null
+    },
+    {
+        "instruction": "State the economic theory of supply and demand.",
+        "instruction_translated": "Назарияи иқтисодии пешниҳод ва талаботро баён кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Compare and contrast the primary components of the US government.",
+        "instruction_translated": "Қисмҳои асосии ҳукумати ИМА-ро муқоиса ва фарқ кунед.",
+        "category": null
+    },
+    {
+        "instruction": "Describe the functionality of the Python built-in function \"range()\".",
+        "instruction_translated": "Функсияҳои функсияи дарунсохти Python &quot;range()&quot;-ро тавсиф кунед.",
+        "category": null
+    }
+]
