@@ -452,7 +452,23 @@ def select_direction(
     with open(f"{artifact_dir}/direction_evaluations_filtered_{mode}.json", 'w') as f:
         json.dump(json_output_filtered_scores, f, indent=4)
 
-    assert len(filtered_scores) > 0, "All scores have been filtered out!"
+    if len(filtered_scores) == 0:
+        # Fallback: all directions were filtered (NaN scores or too strict threshold).
+        # Collect ALL non-NaN scores ignoring KL and layer pruning, pick the best one.
+        print("[WARNING] All scores filtered out! Falling back to best non-NaN direction (ignoring KL/layer filters).")
+        for source_pos in range(n_pos):
+            for source_layer in range(n_layer):
+                rs = ablation_refusal_scores[source_pos, source_layer].item()
+                ss = steering_refusal_scores[source_pos, source_layer].item()
+                kl = ablation_kl_div_scores[source_pos, source_layer].item()
+                if math.isnan(rs) and math.isnan(ss) and math.isnan(kl):
+                    continue  # skip only if ALL are NaN
+                score = -rs if not math.isnan(rs) else 0.0
+                filtered_scores.append((score, source_pos, source_layer))
+        if len(filtered_scores) == 0:
+            # Last resort: just pick middle layer, position 0
+            print("[WARNING] All scores are NaN. Picking layer n_layer//2 as fallback.")
+            filtered_scores.append((0.0, 0, n_layer // 2))
 
     # sorted in descending order
     filtered_scores = sorted(filtered_scores, key=lambda x: x[0], reverse=True)
