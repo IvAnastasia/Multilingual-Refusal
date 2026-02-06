@@ -58,7 +58,7 @@ Answers: [/INST]
             self.tokenizer_guard.convert_tokens_to_ids("<|eot_id|>")
         ]
 
-        generated_ids = self.llama_guard.generate(**model_inputs, eos_token_id=terminators, max_new_tokens=256,  pad_token_id=self.tokenizer_guard.eos_token_id)
+        generated_ids = self.guard.generate(**model_inputs, eos_token_id=terminators, max_new_tokens=256,  pad_token_id=self.tokenizer_guard.eos_token_id)
 
         return self.tokenizer_guard.batch_decode(generated_ids[:, model_inputs['input_ids'].shape[1]:], skip_special_tokens=True)
 
@@ -104,7 +104,8 @@ Answers: [/INST]
         safety_counts = 0
         for batch in tqdm(data_loader):#, total=len(data_loader), enrich_print=False, disable=not verbose):
 
-            prompt = batch["instruction_en"] 
+            prompt = batch["instruction_en"]
+            # For non-English: use back-translated response so WildGuard (English) can evaluate
             response = batch["response"] if cfg.lang == 'en' else batch["response_translated"]
             model_input = self.instruction_format.format(prompt=prompt, response=response)
 
@@ -129,11 +130,16 @@ Answers: [/INST]
         cfg: dict,
         # verbose: bool = True,
     ) -> float:
-
+        """
+        Evaluate completions. For multilingual: use cfg.lang != 'en' so that
+        response_translated (back-translation to English) is used; WildGuard
+        expects English text. instruction_en is always the English prompt.
+        """
         safety_counts = 0
         for data in tqdm(completions):#, total=len(data_loader), enrich_print=False, disable=not verbose):
 
-            prompt = data["instruction_en"] 
+            prompt = data["instruction_en"]
+            # For non-English: use back-translated response so WildGuard (English) can evaluate
             response = data["response"] if cfg.lang == 'en' else data["response_translated"]
             model_input = self.instruction_format.format(prompt=prompt, response=response)
 

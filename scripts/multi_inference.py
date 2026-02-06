@@ -4,22 +4,46 @@ import os
 import os.path as osp
 from datetime import datetime
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv(override=True)
 import argparse
 import random
+import requests
 from dataset.load_dataset import load_dataset_split, load_dataset
 
 from pipeline.config import Config
 from pipeline.model_utils.model_factory import construct_model_base
-from pipeline.utils.hook_utils import get_activation_addition_input_pre_hook,get_all_direction_ablation_hooks
+from pipeline.utils.hook_utils import get_activation_addition_input_pre_hook, get_all_direction_ablation_hooks
 from pipeline.submodules.evaluate_jailbreak import evaluate_jailbreak
 import mmengine
 from pipeline.utils.hook_utils import add_hooks
-import deepl
 import sys
-from deep_translator import GoogleTranslator
 from tqdm import tqdm
 from utils.utils import LoggerWriter
+
+# Google Cloud Translation API (back-translate to English)
+GOOGLE_TRANSLATE_API_KEY = os.environ.get("GOOGLE_TRANSLATE_API_KEY")
+TRANSLATE_API_URL = "https://translation.googleapis.com/language/translate/v2"
+
+
+def translate_to_english(text: str, source_lang: str, api_key: str = None) -> str:
+    """Translate text to English using Google Cloud Translation API. Uses GOOGLE_TRANSLATE_API_KEY from .env."""
+    key = api_key or GOOGLE_TRANSLATE_API_KEY
+    if not key:
+        raise ValueError(
+            "GOOGLE_TRANSLATE_API_KEY not set. Add it to your .env for back-translation."
+        )
+    # Google API uses zh-CN for Chinese; keep other codes as-is
+    source = "zh-CN" if source_lang == "zh" else source_lang
+    payload = {"q": [text], "target": "en", "source": source}
+    resp = requests.post(
+        TRANSLATE_API_URL,
+        params={"key": key},
+        json=payload,
+        timeout=60,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    return data["data"]["translations"][0]["translatedText"]
 
 def main(config_path, data_type):
     
@@ -53,18 +77,15 @@ def main(config_path, data_type):
 
     
     if cfg.lang != 'en':
-        translator = GoogleTranslator(source=cfg.lang, target='en')
-        
-        for response in tqdm(completions_baseline):
-            # response['instruction'] = translator.translate(response['instruction'], target_lang='en')
-            # response['response_translated'] = translator.translate_text(response['response'], target_lang='en-us').text
-            if len (response['response']) >= 5000:
-                response['response'] = response['response'][:4999]
+        for response in tqdm(completions_baseline, desc="Back-translating to English"):
+            text = response["response"]
+            if len(text) >= 5000:
+                text = text[:4999]
             try:
-                translation = translator.translate(response['response'])
-            except:
-                translation = 'Translation Error'
-            response['response_translated'] = translation if translation else response['response']
+                response["response_translated"] = translate_to_english(text, source_lang=cfg.lang)
+            except Exception as e:
+                print(f"Translation failed: {e}")
+                response["response_translated"] = "Translation Error"
     
     with open (f"{artifact_path}/completions_baseline_{data_type}.json", "w") as f:
         json.dump(completions_baseline, f, indent=4)
