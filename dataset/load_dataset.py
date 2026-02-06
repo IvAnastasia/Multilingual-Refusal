@@ -25,7 +25,11 @@ def load_dataset_split(harmtype: str, split: str, lang: str='en', instructions_o
         dataset = json.load(f)
 
     if instructions_only:
-        dataset = [d['instruction'] for d in dataset]
+        # For non-English, use translated instruction when present (test has both; train/val store translation in 'instruction')
+        if lang != 'en':
+            dataset = [d.get('instruction_translated', d['instruction']) for d in dataset]
+        else:
+            dataset = [d['instruction'] for d in dataset]
 
     return dataset
 

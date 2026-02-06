@@ -1,9 +1,10 @@
 # artifact_path: output/multilingual
 model_alias: str
 model_path: "google/gemma-2-9b-it"  
-n_train: 128
-n_test: 128
-n_val: 32
+# Reduce for faster runs; increase for better direction quality
+n_train: 32
+n_test: 32
+n_val: 16
 filter_train: true
 filter_or: false
 filter_val: true

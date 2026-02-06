@@ -27,6 +27,10 @@ def parse_arguments():
     parser.add_argument('--config_path', type=str, required=True, help='Path to the config')
     parser.add_argument('--model_path', type=str, required=False, default=None, help='Path to the model')
     parser.add_argument('--batch_size', type=int, required=False, default=None, help='Batch size')
+    parser.add_argument('--n_train', type=int, required=False, default=None, help='Train samples per harmtype for direction (default from config)')
+    parser.add_argument('--n_val', type=int, required=False, default=None, help='Val samples per harmtype for direction selection')
+    parser.add_argument('--n_test', type=int, required=False, default=None, help='Test samples for generation/eval')
+    parser.add_argument('--source_lang', type=str, required=False, default=None, help='Language for data/direction (en, ba, be, tg). Non-en saves to runs/<model_alias>/<source_lang>/')
     return parser.parse_args()
 
 
@@ -56,11 +60,15 @@ def load_and_sample_datasets(cfg):
         Tuple of datasets: (harmful_train, harmless_train, harmful_val, harmless_val)
     """
     random.seed(cfg.random_seed)
-    data1_train = random.sample(load_dataset_split(harmtype=cfg.harmtype_1, split='train', lang=cfg.source_lang, instructions_only=True), cfg.n_train)
-    data2_train = random.sample(load_dataset_split(harmtype=cfg.harmtype_2, split='train', lang=cfg.source_lang, instructions_only=True), cfg.n_train)
-    
-    data1_val = random.sample(load_dataset_split(harmtype=cfg.harmtype_1, split='val', lang=cfg.source_lang, instructions_only=True), cfg.n_val)
-    data2_val = random.sample(load_dataset_split(harmtype=cfg.harmtype_2, split='val', lang=cfg.source_lang, instructions_only=True), cfg.n_val) 
+    d1 = load_dataset_split(harmtype=cfg.harmtype_1, split='train', lang=cfg.source_lang, instructions_only=True)
+    d2 = load_dataset_split(harmtype=cfg.harmtype_2, split='train', lang=cfg.source_lang, instructions_only=True)
+    data1_train = random.sample(d1, min(cfg.n_train, len(d1)))
+    data2_train = random.sample(d2, min(cfg.n_train, len(d2)))
+
+    v1 = load_dataset_split(harmtype=cfg.harmtype_1, split='val', lang=cfg.source_lang, instructions_only=True)
+    v2 = load_dataset_split(harmtype=cfg.harmtype_2, split='val', lang=cfg.source_lang, instructions_only=True)
+    data1_val = random.sample(v1, min(cfg.n_val, len(v1)))
+    data2_val = random.sample(v2, min(cfg.n_val, len(v2)))
     return data1_train, data2_train, data1_val, data2_val
 
 
@@ -245,24 +253,36 @@ def ortho_refusal_directions(cfg, candidate_directions_harm_contrast, candidate_
 
     return candidate_directions_harm_contrast_orth_normalized
 
-def run_pipeline(config_path, model_path, batch_size):
+def run_pipeline(config_path, model_path, batch_size, n_train=None, n_val=None, n_test=None, source_lang=None):
     """Run the full pipeline."""
     
     # cfg = Config(model_alias=model_alias, model_path=model_path)
     cfg = mmengine.Config.fromfile(config_path)
     if model_path is not None:
         cfg.model_path = model_path
+    if source_lang is not None:
+        cfg.source_lang = source_lang
     model_alias = os.path.basename(cfg.model_path)
     cfg.model_alias = model_alias
-    
+
     if batch_size is not None:
         cfg.batch_size = batch_size
+    if n_train is not None:
+        cfg.n_train = n_train
+    if n_val is not None:
+        cfg.n_val = n_val
+    if n_test is not None:
+        cfg.n_test = n_test
     
     
     if 'artifact_path' not in cfg:
-        cfg.artifact_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "runs", cfg.model_alias)  #  , f'mode_{cfg.addact_coeff}')
-    
-    
+        base = os.path.join(os.path.dirname(os.path.realpath(__file__)), "runs", cfg.model_alias)
+        # Per-language artifact dir so ba/be/tg each get their own direction (no overwrite)
+        if getattr(cfg, "source_lang", "en") != "en":
+            cfg.artifact_path = os.path.join(base, cfg.source_lang)
+        else:
+            cfg.artifact_path = base
+
     sys.stdout = Logger(f"{cfg.artifact_path}/output.log")
     sys.stderr = Logger(f"{cfg.artifact_path}/error.log")
     
@@ -285,7 +305,8 @@ def run_pipeline(config_path, model_path, batch_size):
 
 
 
-    harmful_data = random.sample(load_dataset_split(harmtype='harmful', split='test'), cfg.n_test)
+    harmful_test = load_dataset_split(harmtype='harmful', split='test', lang=cfg.source_lang)
+    harmful_data = random.sample(harmful_test, min(cfg.n_test, len(harmful_test)))
     # Initialize hook lists
     baseline_fwd_pre_hooks, baseline_fwd_hooks = [], []
 
@@ -367,5 +388,13 @@ def run_pipeline(config_path, model_path, batch_size):
     
 if __name__ == "__main__":
     args = parse_arguments()
-    run_pipeline(config_path=args.config_path, model_path=args.model_path, batch_size = args.batch_size)
+    run_pipeline(
+        config_path=args.config_path,
+        model_path=args.model_path,
+        batch_size=args.batch_size,
+        n_train=args.n_train,
+        n_val=args.n_val,
+        n_test=args.n_test,
+        source_lang=args.source_lang,
+    )
     
