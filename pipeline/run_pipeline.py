@@ -168,8 +168,12 @@ def generate_and_save_completions_for_dataset(cfg, model_base, fwd_pre_hooks, fw
 
 def evaluate_completions_and_save_results_for_dataset(cfg, intervention_label, dataset_name, eval_methodologies):
     """Evaluate completions and save results for a dataset."""
-    with open(os.path.join(cfg.artifact_path, f'completions/{dataset_name}_{intervention_label}_completions.json'), 'r') as f:
+    completions_file = os.path.join(cfg.artifact_path, f'completions/{dataset_name}_{intervention_label}_completions.json')
+    print(f"[DEBUG run_pipeline] Evaluating {completions_file}")
+    print(f"[DEBUG run_pipeline] cfg.lang={getattr(cfg, 'lang', 'N/A')}, cfg.source_lang={getattr(cfg, 'source_lang', 'N/A')}, methodologies={eval_methodologies}")
+    with open(completions_file, 'r') as f:
         completions = json.load(f)
+    print(f"[DEBUG run_pipeline] Loaded {len(completions)} completions, keys={list(completions[0].keys()) if completions else 'EMPTY'}")
 
     evaluation = evaluate_jailbreak(
         completions=completions,
@@ -282,6 +286,9 @@ def run_pipeline(config_path, model_path, batch_size, n_train=None, n_val=None, 
             cfg.artifact_path = os.path.join(base, cfg.source_lang)
         else:
             cfg.artifact_path = base
+
+    # For source_lang=en there is no "en" subfolder; output goes to pipeline/runs/<model_alias>/
+    print(f"Artifact path (direction will be saved here): {cfg.artifact_path}")
 
     sys.stdout = Logger(f"{cfg.artifact_path}/output.log")
     sys.stderr = Logger(f"{cfg.artifact_path}/error.log")

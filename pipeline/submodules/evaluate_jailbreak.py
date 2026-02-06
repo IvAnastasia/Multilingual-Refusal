@@ -201,11 +201,25 @@ def evaluate_jailbreak(
     else:
         assert completions is not None, "Either completions_path or completions must be provided."
 
+    # --- DEBUG ---
+    print(f"[DEBUG evaluate_jailbreak] translation={translation}, methodologies={methodologies}")
+    print(f"[DEBUG evaluate_jailbreak] n_completions={len(completions)}, evaluation_path={evaluation_path}")
+    if cfg is not None:
+        print(f"[DEBUG evaluate_jailbreak] cfg.lang={getattr(cfg, 'lang', 'N/A')}, "
+              f"cfg.source_lang={getattr(cfg, 'source_lang', 'N/A')}")
+    if completions:
+        sample_keys = list(completions[0].keys())
+        print(f"[DEBUG evaluate_jailbreak] first completion keys: {sample_keys}")
+    # --- END DEBUG ---
+
     prompts = [completion["instruction"] for completion in completions]
     if not translation:
         responses = [completion["response"] for completion in completions]
     else:
-        responses = [completion["response_translated"] for completion in completions]
+        n_missing = sum(1 for c in completions if "response_translated" not in c)
+        if n_missing > 0:
+            print(f"[DEBUG evaluate_jailbreak] WARNING: translation=True but {n_missing}/{len(completions)} completions have no response_translated, using response fallback")
+        responses = [completion.get("response_translated", completion["response"]) for completion in completions]
     if 'category' not in completions[0].keys():
         for completion in completions:
             completion["category"] = "" 
@@ -218,7 +232,7 @@ def evaluate_jailbreak(
             if not translation:
                 completion["is_jailbreak_substring_matching"] = int(not substring_matching_judge_fn(completion["response"]))
             else:
-                completion["is_jailbreak_substring_matching"] = int(not substring_matching_judge_fn(completion["response_translated"]))
+                completion["is_jailbreak_substring_matching"] = int(not substring_matching_judge_fn(completion.get("response_translated", completion["response"])))
                 
         category_to_asr = {}
         for category in sorted(list(set(categories))):

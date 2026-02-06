@@ -28,6 +28,8 @@ python pipeline/run_pipeline.py --config_path configs/cfg.yaml --model_path Qwen
 
 → `pipeline/runs/Qwen2.5-7B-Instruct/direction_ablation.pt` and `direction_metadata_ablation.json`.
 
+**Note:** For `source_lang en` there is **no** `en` subfolder. The English direction is saved directly in `pipeline/runs/<model_alias>/`. Do **not** interrupt the run (e.g. with Ctrl+C) during model download or direction computation, or the direction files will not be created.
+
 ---
 
 ### Step 3 – Transfer English direction to ba, be, tg
