@@ -32,6 +32,7 @@ Thumbs.db
 figs/
 debug/
 *.log
+*.ipynb_checkpoints
 
 # Model checkpoints and large files
 *.pt

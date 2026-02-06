@@ -1,10 +1,10 @@
 # artifact_path: output/multilingual
 model_alias: str
-model_path: "google/gemma-2-9b-it"  
+model_path: "Qwen/Qwen2.5-7B-Instruct"  
 # Reduce for faster runs; increase for better direction quality
-n_train: 32
-n_test: 32
-n_val: 16
+n_train: 64
+n_test: 64
+n_val: 32
 filter_train: true
 filter_or: false
 filter_val: true
@@ -30,7 +30,7 @@ addact_coeff: 1
 addact_coeff_sweep: [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
 kl_threshold: 0.1
 steer_kl_threshold: 2
-ablate_kl_threshold: 0.2
+ablate_kl_threshold: 3
 start_layer: 0
 ortho_lambda: 0.8
 top_n: 1

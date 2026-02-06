@@ -13,6 +13,7 @@ Prerequisites:
      Or for specific langs:
        python scripts/copy_english_direction_to_langs.py --model_alias Qwen2.5-7B-Instruct --langs ba be
 """
+import os
 import argparse
 import json
 import os.path as osp

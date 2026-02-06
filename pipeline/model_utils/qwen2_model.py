@@ -39,8 +39,10 @@ REFUSAL_TOKENS_LANG = {
     'yo': [25612],
     'ja': [127748, 128976],
     'ru': [85391, 30174],
-    'ko': [132759 ]
-
+    'ko': [132759 ],
+    'ba': [85391, 30174],  # Bashkir (Cyrillic) — same as Russian: 'Я', 'К'
+    'be': [85391, 30174],  # Belarusian (Cyrillic) — same as Russian: 'Я', 'К'
+    'tg': [85391, 30174],  # Tajik (Cyrillic) — same as Russian: 'Я', 'К'
     
 }
 def format_instruction_qwen_chat(
