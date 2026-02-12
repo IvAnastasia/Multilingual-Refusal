@@ -1,3 +1,10 @@
+
+
+
+
+
+-------- Original Readme -------
+
 # Refusal Direction is Universal Across Safety-Aligned Languages
 
 This repository contains the code and dataset for the paper "Refusal Direction is Universal Across Safety-Aligned Languages".
