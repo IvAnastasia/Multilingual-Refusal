@@ -1,9 +1,14 @@
 
+Results of Cross-lingual Transfer:
+
+[image.png]
+
+WildGuard evaluation metrics for low-resource languages (Bashkir, Belarusian, Tajik) under baseline, English transfer ablation, and native per-language ablation.
+Transferring the English refusal direction has no measurable effect on model refusal behavior, while native directions successfully bypass refusal, indicating that the dominant refusal mechanism in low-resource languages is language-specific and distinct from the English safety refusal direction.
+   
 
 
-
-
----------------------------------------------------------------------------------- Original Readme ---------------------------------------------------------------------------------------------------------
+-------------------------------- Original Readme ----------------------------
 
 # Refusal Direction is Universal Across Safety-Aligned Languages
 
