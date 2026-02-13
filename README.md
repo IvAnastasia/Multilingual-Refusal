@@ -5,7 +5,7 @@
 
 WildGuard evaluation metrics for low-resource languages (Bashkir, Belarusian, Tajik) under baseline, English transfer ablation, and native per-language ablation show that transferring the English refusal direction has **no measurable effect** on model refusal behavior, while native directions successfully bypass refusal. This suggests that the dominant refusal mechanism in low-resource languages is language-specific and distinct from the English safety refusal direction. A plausible contributing factor is weaker language comprehension in these languages, which may limit the model’s ability to internalize or activate safety representations learned in English and may reduce semantic alignment between transferred and native representations.
 
-Experiments were running for 5 days in total, please sorry for the delay.
+Experiments needed for this figure were running for 6 days in total, please sorry for the delay.
 
 
 ---
