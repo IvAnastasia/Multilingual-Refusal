@@ -8,8 +8,7 @@ WildGuard evaluation metrics for low-resource languages (Bashkir, Belarusian, Ta
 Experiments were running for 4 days in total, please sorry for the delay.
 
 
-
--------------------------------- Original Readme ----------------------------
+-------------------------------- Original Readme -------------------------------
 
 # Refusal Direction is Universal Across Safety-Aligned Languages
 
