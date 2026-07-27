@@ -1,82 +1,60 @@
+# Refusal Directions Across Safety-Aligned and Low-Resource Languages
 
-## Results of Cross-Lingual Transfer
+*Abstract:* Refusal directions have been shown to transfer cross-lingually with near-perfect effectiveness across safety-aligned languages (Wang et al., 2025). This universality is reported to hold regardless of resource level, but the only truly low-resourced language evaluated is Yoruba, which is safety-misaligned and where transfer is limited. It thus remains unclear how refusal directions behave for other low-resourced languages. **We extend PolyRefuse to three additional low-resourced languages (Belarusian, Bashkir, and Tajik) and replicate the pipeline of (Wang et al., 2025) on Qwen2.5-14B-Instruct.** We find that universality is asymmetric: directions from safety-aligned languages transfer broadly, while those from strongly misaligned languages transfer only to other misaligned languages. We further show that geometric alignment and behavioral transfer are partially dissociated. These findings complicate the universality claim and highlight that users of the least-resourced languages may face weaker safety guarantees.
 
-# Getting harmful/harmless data and directions for ba, be, tg
 
-## 1. Get harmful and harmless data (train / val / test) for ba, be, tg
+This repository studies how the **refusal direction** — a single linear direction in a
+language model's residual stream that mediates refusal of harmful requests — behaves
+**across languages**, with a focus on the contrast between higher-resource,
+safety-aligned languages and low-resource ones.
 
-The pipeline needs translated splits:
+The analysis here targets **Qwen2.5-14B-Instruct** and five languages:
+**English (en), Belarusian (be), Bashkir (ba), Tajik (tg), Yoruba (yo)**.
 
-- **Harmful:** `harmful_train`, `harmful_val`, `harmful_test`
-- **Harmless:** `harmless_train`, `harmless_val`, `harmless_test`
+---
+## Key findings (Qwen2.5-14B-Instruct)
 
-These are produced by **translate_data.py** using the Google Cloud Translation API.
-
-**Steps:**
-
-1. Set `GOOGLE_TRANSLATE_API_KEY` in `.env`.
-2. In `scripts/translate_data.py`, ensure `target_langs = ['be', 'tg', 'ba']` (already set).
-3. Run:
-
-   ```bash
-   cd /path/to/Multilingual-Refusal
-   python scripts/translate_data.py
-   ```
-
-This writes into `dataset/splits_multi/` for each language:
-
-- `harmful_{train,val,test}_translated_{lang}.json`
-- `harmless_{train,val,test}_translated_{lang}.json`
-
-Harmless uses sampled English splits (`harmless_train_200_sampled`, `harmless_val_200_sampled`, `harmless_test_500_sampled`); harmful uses the full train/val/test splits.
+- **Cross-lingual safety gradient** (baseline refusal rate): en ≈ 0.95 › be ≈ 0.75 ›
+  yo ≈ 0.38 › ba ≈ 0.12 › tg ≈ 0.08. Safety alignment degrades sharply for low-resource
+  languages.
+- **A refusal direction is only cleanly extractable where harmful/harmless representations
+  separate.** Silhouette scores (harmful vs harmless at the extraction layer):
+  en 0.36, be 0.17, yo 0.09, tg 0.07, ba 0.05. Low-separation languages yield
+  **degenerate directions** (selection collapses to a trivial layer).
+- **Universality is bounded.** Ablating the **English** or **Belarusian** direction drives
+  harmful-query compliance to ≈ 0.9–1.0 across *all* languages (universal), while the
+  **Bashkir / Tajik** directions barely affect English (compliance ≈ 0.06 / 0.33) — they are
+  language-local.
+- **Shared refusal subspace.** For en/be, the refusal direction aligns with the
+  difference-in-means vectors of every language at a consistent depth (~layer 30 of 48).
+- **Refusal-token language matters.** The model expresses refusals in different scripts per
+  language; using mismatched refusal tokens (e.g. Cyrillic tokens for a language the model
+  refuses in English) makes the refusal signal invisible and breaks extraction. Tokens are
+  therefore **calibrated per language** (see below).
 
 ---
 
-## 2. Get the direction for each language (ba, be, tg)
+## Repository layout
 
-Directions are computed by **run_pipeline.py** with `source_lang` set to the target language. Each run loads that language’s harmful/harmless train and val, computes a steering direction, and saves it under `pipeline/runs/<model_alias>/<source_lang>/`.
-
-**Per-language runs:**
-
-```bash
-# Bashkir (ba)
-python pipeline/run_pipeline.py --config_path configs/cfg.yaml --model_path Qwen/Qwen2.5-7B-Instruct --source_lang ba
-
-# Belarusian (be)
-python pipeline/run_pipeline.py --config_path configs/cfg.yaml --model_path Qwen/Qwen2.5-7B-Instruct --source_lang be
-
-# Tajik (tg)
-python pipeline/run_pipeline.py --config_path configs/cfg.yaml --model_path Qwen/Qwen2.5-7B-Instruct --source_lang tg
+```
+configs/            experiment config (cfg.yaml)
+dataset/            multilingual harmful/harmless splits + loaders
+pipeline/           direction extraction + evaluation pipeline
+  run_pipeline.py     extract a refusal direction for one language, then evaluate
+  model_utils/        per-model-family wrappers (refusal tokens, hooks, chat template)
+  submodules/         generate_directions, select_direction, evaluate_jailbreak
+  evaluator/          lm-eval harness wrapper
+  runs/<alias>/<lang>/ per-language artifacts (directions, metadata, completions)
+evaluators/         WildGuard safety classifier wrapper
+scripts/            calibration, cross-lingual evaluation, plotting
+output/<alias>/     evaluation outputs (baseline / ablation / addition / transfer matrix)
+figures/            generated figures
+results/            cached activations, similarity/silhouette JSONs
 ```
 
-Or set `source_lang` in the config and run without `--source_lang`.
-
-**Outputs (per language):**
-
-- `pipeline/runs/Qwen2.5-7B-Instruct/ba/direction_ablation.pt`
-- `pipeline/runs/Qwen2.5-7B-Instruct/ba/direction_metadata_ablation.json`
-- Same for `be/` and `tg/`.
-
-**Optional:** use smaller data for a quick run:
-
-```bash
-python pipeline/run_pipeline.py --config_path configs/cfg.yaml --model_path Qwen/Qwen2.5-7B-Instruct --source_lang ba --n_train 16 --n_val 8 --n_test 16
-```
 
 ---
-
-## 3. Summary
-
-| Step | What | Command / output |
-|------|------|------------------|
-| **Data** | Harmful + harmless train/val/test for ba, be, tg | `python scripts/translate_data.py` → `dataset/splits_multi/*_translated_{ba,be,tg}.json` |
-| **Direction** | One direction per language | `python pipeline/run_pipeline.py ... --source_lang {ba,be,tg}` → `pipeline/runs/<model_alias>/{ba,be,tg}/direction_ablation.pt` + metadata |
-
-After that, **multi_test.py --run_three_langs** will use these per-language directions (or fall back to the English direction if a lang folder is missing).
-
-
-
----
+Below is the README of the paper we build on:
 
 # Refusal Direction is Universal Across Safety-Aligned Languages
 
