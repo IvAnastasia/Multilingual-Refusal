@@ -27,6 +27,8 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
+from scripts.viz_style import palette, style, INK, GRID
+
 LANG_LABELS = {
     "en": "English", "ba": "Bashkir", "be": "Belarusian", "tg": "Tajik",
     "ru": "Russian", "zh": "Chinese", "de": "German", "ja": "Japanese",
@@ -132,11 +134,10 @@ def plot_grouped_bars(results: dict, save_path=None):
             all_metrics.update(metrics.keys())
 
     conditions = sorted(all_conditions)
+    _P = palette()
     cond_colors = {
-        "baseline": "#4c72b0",
-        "ablation": "#dd8452",
-        "addition": "#55a868",
-        "inference_baseline": "#8172b3",
+        "baseline": _P["baseline"], "ablation": _P["ablation"],
+        "addition": _P["addition"], "inference_baseline": _P["ppl"],
     }
 
     for metric_name in sorted(all_metrics):
@@ -154,7 +155,7 @@ def plot_grouped_bars(results: dict, save_path=None):
             offset = (ci - len(conditions) / 2 + 0.5) * width
             color = cond_colors.get(cond, f"C{ci}")
             bars = ax.bar(x + offset, values, width * 0.9, label=cond.replace("_", " ").title(),
-                          color=color, edgecolor="black", linewidth=0.5)
+                          color=color, edgecolor="white", linewidth=0.6)
 
             for bar, val in zip(bars, values):
                 if val > 0:
@@ -203,11 +204,10 @@ def plot_combined(results: dict, save_path=None):
         print("No metrics found to plot.")
         return
 
+    _P = palette()
     cond_colors = {
-        "baseline": "#4c72b0",
-        "ablation": "#dd8452",
-        "addition": "#55a868",
-        "inference_baseline": "#8172b3",
+        "baseline": _P["baseline"], "ablation": _P["ablation"],
+        "addition": _P["addition"], "inference_baseline": _P["ppl"],
     }
 
     fig, axes = plt.subplots(1, n_metrics, figsize=(max(5, n_metrics * 4), 5), sharey=True)
@@ -226,7 +226,7 @@ def plot_combined(results: dict, save_path=None):
             offset = (ci - len(conditions) / 2 + 0.5) * width
             color = cond_colors.get(cond, f"C{ci}")
             bars = ax.bar(x + offset, values, width * 0.9, label=cond.replace("_", " ").title(),
-                          color=color, edgecolor="black", linewidth=0.5)
+                          color=color, edgecolor="white", linewidth=0.6)
             for bar, val in zip(bars, values):
                 if val > 0:
                     ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.01,
@@ -256,24 +256,67 @@ def plot_combined(results: dict, save_path=None):
     plt.close(fig)
 
 
+def plot_pair(results, cond_key, metric_label, save_path, title):
+    """One grouped-bar figure: per language, Baseline vs <cond_key> for a single metric."""
+    P = palette()
+    langs = list(results.keys())
+    vals_base = [results[l].get("baseline", {}).get(metric_label, np.nan) for l in langs]
+    vals_int = [results[l].get(cond_key, {}).get(metric_label, np.nan) for l in langs]
+
+    x = np.arange(len(langs))
+    w = 0.38
+    fig, ax = plt.subplots(figsize=(max(6, len(langs) * 1.4), 4.6))
+    b1 = ax.bar(x - w / 2, vals_base, w * 0.9, color=P["baseline"], label="Baseline", zorder=3)
+    b2 = ax.bar(x + w / 2, vals_int, w * 0.9, color=P[cond_key], label=cond_key.capitalize(), zorder=3)
+    for bars in (b1, b2):
+        for bar in bars:
+            h = bar.get_height()
+            if not np.isnan(h):
+                ax.text(bar.get_x() + bar.get_width() / 2, h + 0.015, f"{h:.2f}",
+                        ha="center", va="bottom", fontsize=8.5, color=INK)
+    ax.set_xticks(x)
+    ax.set_xticklabels([LANG_LABELS.get(l, l) for l in langs], fontsize=11)
+    ax.set_ylim(0, 1.12)
+    ax.set_yticks(np.arange(0, 1.01, 0.25))
+    ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
+    ax.set_axisbelow(True)
+    handles, labels = ax.get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", ncol=2, frameon=False,
+               fontsize=10, bbox_to_anchor=(0.5, 0.96))
+    fig.tight_layout(rect=[0, 0, 1, 0.92])
+    if save_path:
+        os.makedirs(osp.dirname(save_path) or ".", exist_ok=True)
+        fig.savefig(save_path, dpi=200, bbox_inches="tight")
+        print(f"Saved: {save_path}")
+    else:
+        plt.show()
+    plt.close(fig)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Visualise multi_test results across languages")
     parser.add_argument("--model_alias", "-m", required=True, help="Model alias (e.g. Qwen2.5-7B-Instruct)")
     parser.add_argument("--langs", "-l", nargs="+", default=list(DEFAULT_LANGS), help="Language codes")
     parser.add_argument("--base_dir", default="output", help="Base output dir (default: output)")
     parser.add_argument("--mode", default=DEFAULT_MODE, help="Intervention mode label (default: harm_ablation)")
-    parser.add_argument("--include_inference", action="store_true", help="Also include multi_inference baseline (from output/multi_inference/)")
-    parser.add_argument("--save", "-s", default=None, help="Save figures (e.g. figures/multi_test.png)")
-    parser.add_argument("--separate", action="store_true", help="Save one figure per metric instead of combined")
+    parser.add_argument("--include_inference", action="store_true", help="Also include multi_inference baseline")
+    parser.add_argument("--metric", default="WildGuard Refusal", choices=list(METRICS.values()),
+                        help="Metric to plot (default: WildGuard Refusal)")
+    parser.add_argument("--save", "-s", default=None, help="Save path stem, e.g. figures/transfer_14b.png "
+                        "(writes *_baseline_vs_ablation and *_baseline_vs_addition)")
     args = parser.parse_args()
 
     results = collect_results(args.base_dir, args.model_alias, args.langs, args.mode, args.include_inference)
     print_summary(results)
+    style()
 
-    if args.separate:
-        plot_grouped_bars(results, save_path=args.save)
+    if args.save:
+        base, ext = osp.splitext(args.save)
+        abl_path, add_path = f"{base}_baseline_vs_ablation{ext}", f"{base}_baseline_vs_addition{ext}"
     else:
-        plot_combined(results, save_path=args.save)
+        abl_path = add_path = None
+    plot_pair(results, "ablation", args.metric, abl_path, f"{args.metric}: Baseline vs Ablation")
+    plot_pair(results, "addition", args.metric, add_path, f"{args.metric}: Baseline vs Addition")
 
 
 if __name__ == "__main__":

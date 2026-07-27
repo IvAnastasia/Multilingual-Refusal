@@ -60,14 +60,28 @@ def back_translate_completions(completions_list, lang: str):
             completion["response_translated"] = "Translation Error"
 
 
-def _direction_paths(model_alias: str, lang: str):
-    """Return (direction.pt path, metadata path) for a language. Tries direction.pt then direction_ablation.pt."""
+def _direction_paths(model_alias: str, lang: str, prefer_native: bool = False):
+    """Return (direction_path, metadata_path) for a language.
+
+    Transfer (default): direction.pt (copied English vector) + direction_metadata_ablation.json
+        (which the copy set to English's layer). Falls back to direction_ablation.pt.
+    Native (prefer_native=True): direction_ablation.pt (the language's own vector) +
+        direction_metadata_native.json (the language's own layer, since the copy overwrote
+        direction_metadata_ablation.json with English's layer). Falls back to direction.pt / ablation meta.
+    """
     if lang == "en":
         base = osp.join("pipeline", "runs", model_alias)
     else:
         base = osp.join("pipeline", "runs", model_alias, lang)
-    meta_path = osp.join(base, "direction_metadata_ablation.json")
-    for name in ("direction.pt", "direction_ablation.pt"):
+    if prefer_native:
+        pt_names = ("direction_ablation.pt", "direction.pt")
+        meta_names = ("direction_metadata_native.json", "direction_metadata_ablation.json")
+    else:
+        pt_names = ("direction.pt", "direction_ablation.pt")
+        meta_names = ("direction_metadata_ablation.json", "direction_metadata_native.json")
+    meta_path = next((osp.join(base, m) for m in meta_names if osp.isfile(osp.join(base, m))),
+                     osp.join(base, meta_names[-1]))
+    for name in pt_names:
         dir_path = osp.join(base, name)
         if osp.isfile(dir_path):
             return dir_path, meta_path
@@ -77,11 +91,13 @@ def _direction_paths(model_alias: str, lang: str):
 def _load_direction_and_layer(cfg, model_alias: str):
     """Load direction tensor and layer index. Fall back to English direction if lang-specific path missing."""
     lang = getattr(cfg, "source_lang", cfg.lang)
-    dir_path, meta_path = _direction_paths(model_alias, lang)
+    prefer_native = getattr(cfg, "prefer_native", False)
+    dir_path, meta_path = _direction_paths(model_alias, lang, prefer_native=prefer_native)
     if dir_path is None and lang != "en":
-        dir_path, meta_path = _direction_paths(model_alias, "en")
+        dir_path, meta_path = _direction_paths(model_alias, "en", prefer_native=prefer_native)
         if dir_path is not None:
             print(f"  No direction for {lang}, using English direction")
+    print(f"  [{'native' if prefer_native else 'transfer'}] direction={dir_path}  meta={meta_path}")
     if dir_path is None:
         raise FileNotFoundError(
             f"No direction found. Run pipeline with source_lang=en to create "
@@ -99,6 +115,25 @@ def _load_direction_and_layer(cfg, model_alias: str):
 def run_for_lang(cfg, model_base, logger):
     """Run generation (baseline + ablation + addition), back-translate if non-en, save and evaluate for one language."""
     model_alias = cfg.model_alias
+
+    # baseline-only fast path: no steering direction needed (just the model's default behavior)
+    if getattr(cfg, "baseline_only", False):
+        os.makedirs(osp.join(cfg.artifact_path, "completions"), exist_ok=True)
+        data_test = load_dataset_split("harmful", split="test", lang=cfg.lang)
+        comp = model_base.generate_completions(
+            data_test, fwd_pre_hooks=[], fwd_hooks=[], max_new_tokens=512,
+            batch_size=cfg.batch_size, system=None, translation=(cfg.lang != "en"))
+        if cfg.lang != "en":
+            back_translate_completions(comp, cfg.lang)
+        with open(osp.join(cfg.artifact_path, "completions", "harmful_baseline_completions.json"), "w", encoding="utf-8") as f:
+            json.dump(comp, f, indent=4, ensure_ascii=False)
+        evaluate_jailbreak(
+            completions=comp, methodologies=cfg.jailbreak_eval_methodologies,
+            evaluation_path=osp.join(cfg.artifact_path, "completions", "harmful_baseline_evaluations.json"),
+            translation=(cfg.lang != "en"), cfg=cfg, logger=logger)
+        print(f"  [baseline_only] saved to {cfg.artifact_path}/completions/")
+        return
+
     direction_ablation, layer = _load_direction_and_layer(cfg, model_alias)
 
     baseline_fwd_pre_hooks, baseline_fwd_hooks = [], []
@@ -154,19 +189,63 @@ def run_for_lang(cfg, model_base, logger):
     print(f"  Saved completions and evaluations to {cfg.artifact_path}/completions/")
 
 
-def main(config_path, run_three_langs=False):
+def run_transfer_pair(cfg, model_base, logger):
+    """Apply cfg.source_lang's (native) refusal direction to cfg.lang's harmful test set,
+    via ABLATION, and WildGuard-evaluate. Baseline is target-only (already computed elsewhere),
+    so it is not recomputed here."""
+    direction, layer = _load_direction_and_layer(cfg, cfg.model_alias)  # uses cfg.source_lang + prefer_native
+    abl_pre, abl_hooks = get_all_direction_ablation_hooks(model_base, direction, 0)
+    data_test = load_dataset_split("harmful", split="test", lang=cfg.lang)
+    tr = (cfg.lang != "en")
+    comp = model_base.generate_completions(
+        data_test, fwd_pre_hooks=abl_pre, fwd_hooks=abl_hooks,
+        max_new_tokens=512, batch_size=cfg.batch_size, system=None, translation=tr)
+    if tr:
+        back_translate_completions(comp, cfg.lang)
+    os.makedirs(osp.join(cfg.artifact_path, "completions"), exist_ok=True)
+    with open(osp.join(cfg.artifact_path, "completions", "harmful_harm_ablation_completions.json"), "w", encoding="utf-8") as f:
+        json.dump(comp, f, indent=4, ensure_ascii=False)
+    evaluate_jailbreak(
+        completions=comp, methodologies=cfg.jailbreak_eval_methodologies,
+        evaluation_path=osp.join(cfg.artifact_path, "completions", "harmful_harm_ablation_evaluations.json"),
+        translation=tr, cfg=cfg, logger=logger)
+    print(f"  Saved {cfg.source_lang}->{cfg.lang} to {cfg.artifact_path}/completions/")
+
+
+def main(config_path, run_three_langs=False, native=False, langs=None, baseline_only=False,
+         transfer_matrix=False, sources=None, targets=None):
     cfg = mmengine.Config.fromfile(config_path)
     time_stamp = datetime.now().strftime("%y%m%d_%H%M")
     model_alias = os.path.basename(cfg.model_path)
     cfg.model_alias = model_alias
+    cfg.prefer_native = native
+    cfg.baseline_only = baseline_only
+    suffix = "_native" if native else ""
+    loop_langs = tuple(langs) if langs else DEFAULT_LANGS
+
+    if transfer_matrix:
+        # cross-lingual transfer: each source's native direction applied to each target's test set
+        srcs = tuple(sources) if sources else ("be", "ba", "tg")
+        tgts = tuple(targets) if targets else ("en", "be", "ba", "tg")
+        cfg.prefer_native = True
+        model_base = construct_model_base(cfg.model_path)
+        for s in srcs:
+            for t in tgts:
+                cfg.source_lang = s
+                cfg.lang = t
+                cfg.artifact_path = osp.join("output", model_alias, "xling", f"{s}_to_{t}")
+                print(f"\n--- direction from {s} -> test on {t} ---")
+                run_transfer_pair(cfg, model_base, logger=None)
+        return
 
     if run_three_langs:
-        # Run only for ba, be, tg with Google API back-translation; don't redirect stdout so tqdm works
+        # Run for the requested languages with Google API back-translation (non-en);
+        # don't redirect stdout so tqdm works
         model_base = construct_model_base(cfg.model_path)
-        for lang in DEFAULT_LANGS:
+        for lang in loop_langs:
             cfg.lang = lang
             cfg.source_lang = lang
-            cfg.artifact_path = osp.join("output", model_alias, lang)
+            cfg.artifact_path = osp.join("output", model_alias, f"{lang}{suffix}")
             os.makedirs(cfg.artifact_path, exist_ok=True)
             log_file = osp.join(cfg.artifact_path, f"{time_stamp}.log")
             logger = mmengine.MMLogger.get_instance(
@@ -198,5 +277,18 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", "-c", type=str, default="configs/cfg.yaml")
     parser.add_argument("--run_three_langs", action="store_true", help="Run only for ba, be, tg with Google API back-translation")
+    parser.add_argument("--native", action="store_true",
+                        help="Use each language's own (native) direction instead of the transferred English one; "
+                             "writes to output/<alias>/<lang>_native/")
+    parser.add_argument("--langs", nargs="+", default=None,
+                        help="Override the default ba/be/tg loop (e.g. --langs en yo)")
+    parser.add_argument("--baseline_only", action="store_true",
+                        help="Only run the no-steering baseline + WildGuard (safety-alignment check)")
+    parser.add_argument("--transfer_matrix", action="store_true",
+                        help="Cross-lingual: apply each --sources native direction to each --targets test set (ablation)")
+    parser.add_argument("--sources", nargs="+", default=None, help="Direction source langs (default: be ba tg)")
+    parser.add_argument("--targets", nargs="+", default=None, help="Test target langs (default: en be ba tg)")
     args = parser.parse_args()
-    main(args.config, run_three_langs=args.run_three_langs)
+    main(args.config, run_three_langs=args.run_three_langs, native=args.native,
+         langs=args.langs, baseline_only=args.baseline_only,
+         transfer_matrix=args.transfer_matrix, sources=args.sources, targets=args.targets)

@@ -51,14 +51,21 @@ def _lang_dir(model_alias: str, lang: str) -> str:
 
 
 def load_metadata(model_alias: str, lang: str):
-    """Load direction_metadata_ablation.json → (position, layer) or None."""
+    """Load the NATIVE (per-language) selected (position, layer), or None.
+
+    Prefer direction_metadata_native.json: for transfer runs the English direction
+    was copied into each language folder, which OVERWROTE direction_metadata_ablation.json
+    with English's layer — so that file reports the same layer for every language.
+    The native backup holds each language's own selected layer.
+    """
     d = _lang_dir(model_alias, lang)
-    path = osp.join(d, "direction_metadata_ablation.json")
-    if not osp.isfile(path):
-        return None
-    with open(path, encoding="utf-8") as f:
-        meta = json.load(f)
-    return meta["pos"][0], meta["layer"][0]
+    for name in ("direction_metadata_native.json", "direction_metadata_ablation.json"):
+        path = osp.join(d, name)
+        if osp.isfile(path):
+            with open(path, encoding="utf-8") as f:
+                meta = json.load(f)
+            return meta["pos"][0], meta["layer"][0]
+    return None
 
 
 def load_all_scores(model_alias: str, lang: str):
@@ -91,13 +98,17 @@ def plot_selected_layers_bar(langs, metadata, save_path=None):
         print("No metadata found for any language.")
         return
 
+    from scripts.viz_style import palette, style, GRID
+    style()
     labels = [LANG_LABELS.get(l, l) for l, _ in present]
     layers = [m[1] for _, m in present]
     positions = [m[0] for _, m in present]
 
     fig, ax = plt.subplots(figsize=(max(6, len(present) * 0.9), 5))
     x = np.arange(len(present))
-    bars = ax.bar(x, layers, color="steelblue", edgecolor="white", width=0.6)
+    bars = ax.bar(x, layers, color=palette()["addition"], edgecolor="white", width=0.6, zorder=3)
+    ax.grid(axis="y", color=GRID, linewidth=0.8, zorder=0)
+    ax.set_axisbelow(True)
 
     # Annotate each bar with layer and position
     for i, (bar, layer, pos) in enumerate(zip(bars, layers, positions)):

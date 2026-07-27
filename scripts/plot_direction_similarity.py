@@ -84,30 +84,50 @@ def load_matrix_from_json(json_path: str):
 
 
 def plot_heatmap(langs, matrix, save_path=None):
-    """Plot an annotated heatmap of the cosine similarity matrix."""
+    """Plot an annotated heatmap of the cosine similarity matrix.
+
+    Cosine similarity is bipolar (−1..1), so use a DIVERGING scale: red = anti-aligned,
+    neutral gray = orthogonal (0), blue = aligned. The diagonal (self-similarity = 1.0)
+    is uninformative, so it is masked to a flat gray and left unlabelled — that keeps the
+    color scale driven by the informative off-diagonal values instead of the constant 1.0.
+    """
+    from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
+    from scripts.viz_style import palette, style
+    style()
+    div = palette()["diverging"]
+
     labels = [LANG_LABELS.get(l, l) for l in langs]
     n = len(langs)
 
-    fig, ax = plt.subplots(figsize=(max(5, n * 1.2), max(4, n * 1.0)))
+    # mask the diagonal so it doesn't dominate the scale or the eye
+    m = matrix.astype(float).copy()
+    np.fill_diagonal(m, np.nan)
 
-    # Color map: blues, with 1.0 = darkest
-    im = ax.imshow(matrix, cmap="Blues", vmin=0.0, vmax=1.0, aspect="equal")
+    # diverging neg <-> neutral(0) <-> pos, from the shared palette
+    cmap = LinearSegmentedColormap.from_list("div", list(div))
+    cmap.set_bad("#b3b1a8")  # darker gray for the masked diagonal
+    lim = float(np.nanmax(np.abs(m))) if np.isfinite(m).any() else 1.0
+    lim = max(lim, 0.2)
+    norm = TwoSlopeNorm(vmin=-lim, vcenter=0.0, vmax=lim)
 
-    # Ticks
-    ax.set_xticks(range(n))
-    ax.set_yticks(range(n))
+    fig, ax = plt.subplots(figsize=(max(5, n * 1.25), max(4, n * 1.05)))
+    im = ax.imshow(m, cmap=cmap, norm=norm, aspect="equal")
+
+    ax.set_xticks(range(n)); ax.set_yticks(range(n))
     ax.set_xticklabels(labels, fontsize=12, rotation=45, ha="right")
     ax.set_yticklabels(labels, fontsize=12)
 
-    # Annotate cells
     for i in range(n):
         for j in range(n):
+            if i == j:
+                ax.text(j, i, "1.00", ha="center", va="center", fontsize=11, color="#3a3a36")
+                continue
             val = matrix[i, j]
-            color = "white" if val > 0.75 else "black"
-            ax.text(j, i, f"{val:.3f}", ha="center", va="center", fontsize=11, color=color, fontweight="bold")
+            color = "white" if abs(val) > 0.55 * lim else "#0b0b0b"
+            ax.text(j, i, f"{val:.2f}", ha="center", va="center", fontsize=11, color=color)
 
-    ax.set_title("Refusal Direction Cosine Similarity", fontsize=14, pad=12)
-    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="Cosine similarity")
+    ax.set_title("Refusal Direction Cosine Similarity", fontsize=14, pad=12, color="#0b0b0b")
+    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="Cosine similarity (diagonal masked)")
     fig.tight_layout()
 
     if save_path:
@@ -131,9 +151,10 @@ def plot_similarity_to_english(langs, matrix, save_path=None):
     sims = [matrix[en_idx, j] for j in other_indices]
     labels = [LANG_LABELS.get(l, l) for l in other_langs]
 
+    from scripts.viz_style import palette, style
+    style()
     fig, ax = plt.subplots(figsize=(max(4, len(other_langs) * 1.5), 4))
-    colors = plt.cm.Blues(np.linspace(0.4, 0.8, len(other_langs)))
-    bars = ax.bar(labels, sims, color=colors, edgecolor="black", linewidth=0.5)
+    bars = ax.bar(labels, sims, color=palette()["addition"], edgecolor="white", linewidth=0.6, zorder=3)
 
     for bar, sim in zip(bars, sims):
         ax.text(bar.get_x() + bar.get_width() / 2, bar.get_height() + 0.01,
