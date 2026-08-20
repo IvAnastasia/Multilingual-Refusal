@@ -31,18 +31,22 @@ QWEN_CHAT_TEMPLATE = """<|im_start|>user
 
 QWEN_REFUSAL_TOKS = [40, 2121] # ['I', 'As']
 REFUSAL_TOKENS_LANG = {
-    'en': [40, 2121], # ['I', 'As']
+    'en': [40], # ['I']  (WildGuard-calibrated; 254/260 native refusals)
     'zh': [35946], #'我',
     'de': [17360, 40369], # 'Es'
     'th': [126331,124430], # 'ขอ','ฉ'
     'yi': [129613],
-    'yo': [25612],
+    'yo': [40],  # Yoruba — model responds/refuses in English ('I'); calibrated (only 3/260 native refusals)
     'ja': [127748, 128976],
     'ru': [85391, 30174],
     'ko': [132759 ],
-    'ba': [85391, 30174],  # Bashkir (Cyrillic) — same as Russian: 'Я', 'К'
-    'be': [85391, 30174],  # Belarusian (Cyrillic) — same as Russian: 'Я', 'К'
-    'tg': [85391, 30174],  # Tajik (Cyrillic) — same as Russian: 'Я', 'К'
+    # Derived per language with scripts/calibrate_refusal_tokens.py: WildGuard-labelled
+    # refusals vs harmless responses -> most distinctive sentence-initial tokens (paper Table 4).
+    # These languages refuse in their own Cyrillic script, NOT English. Native baseline refusal
+    # rates on target-language harmful prompts are low for ba/tg (safety barely transfers):
+    'ba': [147871, 37991, 60332],  # Bashkir (Cyrillic): 'Һ','М','Б'  (23/260 native refusals)
+    'be': [85391, 20195],          # Belarusian (Cyrillic): 'Я','Н'    (198/260 native refusals)
+    'tg': [60332, 127131, 26338],  # Tajik (Cyrillic): 'Б','Ш','К'     (19/260 native refusals)
     
 }
 def format_instruction_qwen_chat(

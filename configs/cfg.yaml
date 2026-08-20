@@ -1,6 +1,6 @@
 # artifact_path: output/multilingual
 model_alias: str
-model_path: "Qwen/Qwen2.5-7B-Instruct"  
+model_path: "/beegfs/scratch/project/calmar/ret_agents/.cache/models/Qwen2.5-14B-Instruct"
 # Reduce for faster runs; increase for better direction quality
 n_train: 64
 n_test: 64
